@@ -1,0 +1,3 @@
+
+" ... sModeMappings.vim
+

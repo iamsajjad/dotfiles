@@ -1,0 +1,3 @@
+
+" ... hybridMaterialConfig.vim
+

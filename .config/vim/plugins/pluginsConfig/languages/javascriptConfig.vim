@@ -1,0 +1,3 @@
+
+" ... javaScriptConfig.vim
+

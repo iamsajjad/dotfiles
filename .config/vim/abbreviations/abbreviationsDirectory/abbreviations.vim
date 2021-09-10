@@ -1,0 +1,3 @@
+
+" ... abbreviations.vim
+

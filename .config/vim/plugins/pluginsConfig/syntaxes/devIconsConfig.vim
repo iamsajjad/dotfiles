@@ -1,0 +1,3 @@
+
+" ... devIconsConfig.vim
+

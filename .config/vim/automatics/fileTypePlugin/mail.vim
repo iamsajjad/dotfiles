@@ -1,0 +1,5 @@
+
+" ... mail.vim
+
+setlocal spell
+

@@ -1,0 +1,3 @@
+
+" ... vimWikiConfig.vim
+

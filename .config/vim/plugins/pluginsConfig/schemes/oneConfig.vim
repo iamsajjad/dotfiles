@@ -1,0 +1,3 @@
+
+" ... oneConfig.vim
+

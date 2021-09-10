@@ -1,0 +1,3 @@
+
+" ... bindzone.vim
+

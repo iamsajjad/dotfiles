@@ -1,0 +1,5 @@
+
+" ... gitcommit.vim
+
+setlocal spell
+
