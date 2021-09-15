@@ -13,6 +13,7 @@ export PATH
 # editor
 export VISUAL=nvim
 export EDITOR="$VISUAL"
+export MANPAGER="nvim +Man!"
 
 # remove duplicate entries from history
 export HISTCONTROL=ignoreboth
