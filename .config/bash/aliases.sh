@@ -2,7 +2,7 @@
 # ... aliases.sh
 
 # reloads the bashrc file
-alias bashreload="source ~/.bashrc && echo Bash config reloaded"
+alias reloadrc="source ~/.bashrc && echo Bash config reloaded"
 
 # alias to show the date
 alias da='date "+%Y-%m-%d %A %T %Z"'
