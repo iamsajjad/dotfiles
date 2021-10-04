@@ -2,7 +2,7 @@
 # ... aliases.zsh
 
 # reloads the .zshrc file
-alias reload="source ~/.zshrc"
+alias reloadrc="source ~/.zshrc"
 
 # alias to show the date
 alias da='date "+%Y-%m-%d %A %T %Z"'
