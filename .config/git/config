@@ -1,0 +1,98 @@
+
+; ... gitconfig
+
+[user]
+    name = Sajjad alDalwachee
+    email = sajjad.aldalwachee@gmail.com
+
+[core]
+    editor = nvim
+    pager = delta
+    attributesFile = ~/.config/git/gitattributes
+    excludesfile = ~/.config/git/gitignore
+
+[init]
+    defaultBranch = master
+
+[pull]
+    rebase = true
+
+[rebase]
+    autoStash = true
+
+[alias]
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+
+[push]
+    default = current
+
+[interactive]
+    diffFilter = delta --color-only --features=interactive
+
+[delta]
+    dark = true
+    side-by-side = true
+    line-numbers = true
+    syntax-theme = gruvbox
+
+    features = interactive decorations line-numbers
+
+    ; block of code removed style
+    minus-emph-style = syntax bold "#780000"
+    minus-style = syntax "#400000"
+
+    ; block of code add style
+    plus-emph-style = syntax bold "#007800"
+    plus-style = syntax "#004000"
+
+    ; white space
+    whitespace-error-style = "#280050" reverse
+
+    ; normal code
+    zero-style = syntax
+
+
+[delta "interactive"]
+    keep-plus-minus-markers = false
+
+[delta "decorations"]
+    ; file name
+    file-style = "#00dfff" box underline
+    file-decoration-style = "#303030" underline
+
+    ; file sign
+    file-added-label = [+]
+    file-copied-label = [C]
+    file-modified-label = [M]
+    file-removed-label = [-]
+    file-renamed-label = [R]
+
+    ; header of change
+    hunk-header-decoration-style = "#303030" box
+    hunk-header-file-style = bold "#00dfff"
+    hunk-header-line-number-style = "#00dfff"
+    hunk-header-style = syntax
+
+    ; commit style
+    commit-decoration-style ="#303030" box
+    commit-style = "#00dfff"
+
+
+[delta "line-numbers"]
+    ; vertical line shape
+    line-numbers-left-format = "{nm:>4}│"
+    line-numbers-right-format = "{np:>4}│"
+
+    ; vertical line color
+    line-numbers-left-style = "#780000"
+    line-numbers-right-style = "#007800"
+
+    ; numbers colors
+    line-numbers-minus-style = "#780000"
+    line-numbers-plus-style = "#007800"
+    line-numbers-zero-style = "#808080"
+
+[credential]
+    helper = store --file ~/.cache/git/credentials
+    helper = cache
+
