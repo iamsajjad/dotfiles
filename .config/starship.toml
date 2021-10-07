@@ -1,0 +1,143 @@
+
+# ... starship.toml
+
+format = "$all"
+
+# use custom format
+# format = """
+# [┌───────────────────>](bold green)
+# [│](bold green)$directory$rust$package
+# [└─>](bold green) """
+
+# inserts a blank line between shell prompts
+add_newline = false
+
+# make prompt a single line instead of two lines
+[line_break]
+disabled = true
+
+# character status
+[character]
+
+# "success_symbol" the format string used before the text input if the previous command succeeded.
+success_symbol = "[•](bold fg:#00dfff)"
+
+# "error_symbol" the format string used before the text input if the previous command failed.
+error_symbol = "[•](bold fg:#dc143c)"
+
+# "vicmd_symbol" the format string used before the text input if the shell is in vim normal mode.
+vicmd_symbol = "[•](bold fg:#5fff00)"
+
+# git commit configuration
+[git_commit]
+tag_symbol = " tag "
+
+# git status configuration
+[git_status]
+ahead = ">"
+behind = "<"
+diverged = "<>"
+renamed = "r"
+deleted = "x"
+
+# disable the package module, hiding it from the prompt completely
+# [package]
+# disabled = true
+
+# packages
+[aws]
+symbol = "aws "
+
+[cobol]
+symbol = "cobol "
+
+[conda]
+symbol = "conda "
+
+[crystal]
+symbol = "cr "
+
+[cmake]
+symbol = "cmake "
+
+[dart]
+symbol = "dart "
+
+[deno]
+symbol = "deno "
+
+[dotnet]
+symbol = ".NET "
+
+[directory]
+read_only = " ro"
+
+[docker_context]
+symbol = "docker "
+
+[elixir]
+symbol = "exs "
+
+[elm]
+symbol = "elm "
+
+[git_branch]
+symbol = "git "
+
+[golang]
+symbol = "go "
+
+[hg_branch]
+symbol = "hg "
+
+[java]
+symbol = "java "
+
+[julia]
+symbol = "jl "
+
+[kotlin]
+symbol = "kt "
+
+[nodejs]
+symbol = "nodejs "
+
+[memory_usage]
+symbol = "memory "
+
+[nim]
+symbol = "nim "
+
+[nix_shell]
+symbol = "nix "
+
+[ocaml]
+symbol = "ml "
+
+[package]
+symbol = "pkg "
+
+[perl]
+symbol = "pl "
+
+[php]
+symbol = "php "
+
+[purescript]
+symbol = "purs "
+
+[python]
+symbol = "py "
+
+[ruby]
+symbol = "rb "
+
+[rust]
+symbol = "rs "
+
+[scala]
+symbol = "scala "
+
+[swift]
+symbol = "swift "
+
