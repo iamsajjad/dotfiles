@@ -1,0 +1,8 @@
+
+# ... .gitignore
+
+# ignore dotfiles bare repository directory to block any
+# recursion problems by accidentally add the dotfiles bare repository
+# to it self, like `dotfiles add .files`.
+.files
+
