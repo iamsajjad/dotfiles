@@ -117,5 +117,5 @@ alias sshclear="rm ~/.ssh/multiplex/* -f && echo SSH connection cache cleared;"
 alias sshlist="echo Currently open ssh connections && echo && l ~/.ssh/multiplex/"
 
 # dotfiles repository
-alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.files/ --work-tree=$HOME'
 
