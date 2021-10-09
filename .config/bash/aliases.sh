@@ -2,7 +2,7 @@
 # ... aliases.sh
 
 # reloads the bashrc file
-alias reloadrc="source ~/.bashrc && echo Bash config reloaded"
+alias reloadrc='source ~/.bashrc && echo Bash config reloaded'
 
 # alias to show the date
 alias da='date "+%Y-%m-%d %A %T %Z"'
@@ -17,7 +17,7 @@ alias eip='curl ipinfo.io/ip'
 alias sha='shasum -a 256'
 
 # generate a random, 20-character password.
-alias passphrase="openssl rand -base64 20"
+alias passphrase='openssl rand -base64 20'
 
 # alias's to modified commands
 alias cp='cp -i'
@@ -27,8 +27,8 @@ alias mkdir='mkdir -p'
 alias ps='ps auxf'
 alias ping='ping -c 10'
 alias less='less -R'
-alias c="clear"
-alias cl="clear;ls;pwd"
+alias c='clear'
+alias cl='clear;ls;pwd'
 alias dnf='sudo dnf'
 alias multitail='multitail --no-repeat -c'
 alias freshclam='sudo freshclam'
@@ -64,8 +64,8 @@ alias lm='ls -alh |more'                                    # pipe through 'more
 alias lw='ls -xAh'                                          # wide listing format
 alias ll='ls -Fls'                                          # long listing format
 alias labc='ls -lap'                                        # alphabetical sort
-alias lf="ls -l | egrep -v '^d'"                            # files only
-alias ldir="ls -l | egrep '^d'"                             # directories only
+alias lf='ls -l | egrep -v "^d"'                            # files only
+alias ldir='ls -l | egrep "^d"'                             # directories only
 alias left='ls -t -1'                                       # Sort by modification time
 alias count='find . -type f | wc -l'                        # count files
 
@@ -78,14 +78,14 @@ alias 755='chmod -R 755'
 alias 777='chmod -R 777'
 
 # alias's to show disk space and space used in a folder
-alias diskspace="du -S | sort -n -r |more"
+alias diskspace='du -S | sort -n -r |more'
 alias folders='du -h --max-depth=1'
 alias folderssort='find . -maxdepth 1 -type d -print0 | xargs -0 du -sk | sort -rn'
 alias tree='tree -CAhF --dirsfirst'
 alias treed='tree -CAFd'
 alias mountedinfo='df -hT'
 alias mnt='mount | grep -E ^/dev | column -t'               # view only mounted drives
-alias d="du -sh"                                            # prints disk usage in human readable form
+alias d='du -sh'                                            # prints disk usage in human readable form
 
 # alias's for archives
 alias mktar='tar -cvf'
@@ -96,8 +96,8 @@ alias unbz2='tar -xvjf'
 alias ungz='tar -xvzf'
 
 # grep motifications
-alias grep="grep --color"
-alias grepp="grep -P --color"
+alias grep='grep --color'
+alias grepp='grep -P --color'
 
 # git aliases
 alias ga='git add --all'
@@ -113,8 +113,8 @@ alias json='python -m json.tool'                            # Json tools (pipe u
 alias rpyc='find . | grep -E "(__pycache__|\.pyc|\.pyo$)" | xargs rm -rf'
 
 # ssh helper
-alias sshclear="rm ~/.ssh/multiplex/* -f && echo SSH connection cache cleared;"
-alias sshlist="echo Currently open ssh connections && echo && l ~/.ssh/multiplex/"
+alias sshclear='rm ~/.ssh/multiplex/* -f && echo SSH connection cache cleared;'
+alias sshlist='echo Currently open ssh connections && echo && l ~/.ssh/multiplex/'
 
 # dotfiles repository
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.files/ --work-tree=$HOME'
