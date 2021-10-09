@@ -116,6 +116,11 @@ alias rpyc='find . | grep -E "(__pycache__|\.pyc|\.pyo$)" | xargs rm -rf'
 alias sshclear='rm ~/.ssh/multiplex/* -f && echo SSH connection cache cleared;'
 alias sshlist='echo Currently open ssh connections && echo && l ~/.ssh/multiplex/'
 
+# switch between shells
+alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
+alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
+alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
+
 # dotfiles repository
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.files/ --work-tree=$HOME'
 
