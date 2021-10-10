@@ -26,7 +26,7 @@ success_symbol = "[•](bold fg:#00dfff)"
 error_symbol = "[•](bold fg:#dc143c)"
 
 # "vicmd_symbol" the format string used before the text input if the shell is in vim normal mode.
-vicmd_symbol = "[•](bold fg:#5fff00)"
+vicmd_symbol = "[•](bold fg:#019833)"
 
 # git commit configuration
 [git_commit]
