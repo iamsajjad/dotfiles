@@ -99,6 +99,9 @@ symbol = "jl "
 [kotlin]
 symbol = "kt "
 
+[lua]
+symbol = "lua "
+
 [memory_usage]
 symbol = "memory "
 
