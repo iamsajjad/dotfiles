@@ -48,6 +48,9 @@ deleted = "x"
 [aws]
 symbol = "aws "
 
+[cmake]
+symbol = "cmake "
+
 [cobol]
 symbol = "cobol "
 
@@ -57,23 +60,20 @@ symbol = "conda "
 [crystal]
 symbol = "cr "
 
-[cmake]
-symbol = "cmake "
-
 [dart]
 symbol = "dart "
 
 [deno]
 symbol = "deno "
 
-[dotnet]
-symbol = ".NET "
-
 [directory]
 read_only = " ro"
 
 [docker_context]
 symbol = "docker "
+
+[dotnet]
+symbol = ".NET "
 
 [elixir]
 symbol = "exs "
@@ -99,9 +99,6 @@ symbol = "jl "
 [kotlin]
 symbol = "kt "
 
-[nodejs]
-symbol = "nodejs "
-
 [memory_usage]
 symbol = "memory "
 
@@ -110,6 +107,9 @@ symbol = "nim "
 
 [nix_shell]
 symbol = "nix "
+
+[nodejs]
+symbol = "nodejs "
 
 [ocaml]
 symbol = "ml "
