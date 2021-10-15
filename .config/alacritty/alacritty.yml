@@ -643,6 +643,36 @@ schemes:
       cyan:    '#7fdbca'
       white:   '#d6deeb'
 
+  # Colors (Nord)
+  nord: &nord
+
+     # Default colors
+     primary:
+       background: '#2E3440'
+       foreground: '#D8DEE9'
+
+     # Normal colors
+     normal:
+       black:   '#3B4252'
+       red:     '#BF616A'
+       green:   '#A3BE8C'
+       yellow:  '#EBCB8B'
+       blue:    '#81A1C1'
+       magenta: '#B48EAD'
+       cyan:    '#88C0D0'
+       white:   '#E5E9F0'
+
+     # Bright colors
+     bright:
+       black:   '#4C566A'
+       red:     '#BF616A'
+       green:   '#A3BE8C'
+       yellow:  '#EBCB8B'
+       blue:    '#81A1C1'
+       magenta: '#B48EAD'
+       cyan:    '#8FBCBB'
+       white:   '#ECEFF4'
+
 # set scheme: choose one color scheme from those in the above list.
 # available schemes :
 # *tomorrow-night
@@ -653,6 +683,7 @@ schemes:
 # *gruvbox-dark
 # *new-moon
 # *nightfly
+# *nord
 
 # set color scheme to be used
 colors: *tomorrow-night
