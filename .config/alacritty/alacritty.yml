@@ -575,6 +575,36 @@ schemes:
       cyan:    '#427b58'
       white:   '#928374'
 
+  # Colors (New Moon)
+  new-moon: &new-moon
+
+    # Default colors
+    primary:
+      background: '#2D2D2D'
+      foreground: '#B3B9C5'
+
+    # Normal colors
+    normal:
+      black:   '#2D2D2D'
+      red:     '#F2777A'
+      green:   '#92D192'
+      yellow:  '#FFD479'
+      blue:    '#6AB0F3'
+      magenta: '#E1A6F2'
+      cyan:    '#76D4D6'
+      white:   '#B3B9C5'
+
+    # Bright colors
+    bright:
+      black:   '#777C85'
+      red:     '#F2777A'
+      green:   '#76D4D6'
+      yellow:  '#FFEEA6'
+      blue:    '#6AB0F3'
+      magenta: '#E1A6F2'
+      cyan:    '#76D4D6'
+      white:   '#FFFFFF'
+
 # set scheme: choose one color scheme from those in the above list.
 # available schemes :
 # *tomorrow-night
@@ -583,6 +613,7 @@ schemes:
 # *dracula
 # *gruvbox-light
 # *gruvbox-dark
+# *new-moon
 
 # set color scheme to be used
 colors: *tomorrow-night
