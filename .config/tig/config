@@ -201,7 +201,7 @@ source ~/.config/tig/vim.tigrc
 # Note the four leading spaces in the string to match. This is because
 # Git automatically indents commit messages by four spaces.
 
-source ~/.config/tig/colors.tigrc
+source ~/.config/tig/colors/colors.tigrc
 
 # Mappings for colors read from git configuration.
 # Set to "no" to disable.
