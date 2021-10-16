@@ -180,7 +180,7 @@ set pgrp			= no		# Make tig process-group leader
 #   %(diffargs)		The diff options from `diff-options` or `TIG_DIFF_OPTS`
 #   %(prompt)		Prompt for the argument value.
 
-source ~/.config/tig/vim.tigrc
+source ~/.config/tig/bindings/vim.tigrc
 
 # Colors
 # ------
