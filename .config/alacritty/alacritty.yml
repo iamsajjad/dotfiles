@@ -128,7 +128,7 @@ font:
     # family: RobotoMono Nerd Font
     # family: Source Code Pro
     # family: TerminessTTF Nerd Font
-    family: UbuntuMono Nerd Font
+    family: UbuntuMono Nerd Font Mono
     # family: monospace
 
     # The `style` can be specified to pick a specific face.
@@ -148,7 +148,7 @@ font:
     # family: RobotoMono Nerd Font
     # family: Source Code Pro
     # family: TerminessTTF Nerd Font
-    family: UbuntuMono Nerd Font
+    family: UbuntuMono Nerd Font Mono
     # family: monospace
 
     # The `style` can be specified to pick a specific face.
@@ -168,7 +168,7 @@ font:
     # family: RobotoMono Nerd Font
     # family: Source Code Pro
     # family: TerminessTTF Nerd Font
-    family: UbuntuMono Nerd Font
+    family: UbuntuMono Nerd Font Mono
     # family: monospace
 
     # The `style` can be specified to pick a specific face.
@@ -188,7 +188,7 @@ font:
     # family: RobotoMono Nerd Font
     # family: Source Code Pro
     # family: TerminessTTF Nerd Font
-    family: UbuntuMono Nerd Font
+    family: UbuntuMono Nerd Font Mono
     # family: monospace
 
     # The `style` can be specified to pick a specific face.
