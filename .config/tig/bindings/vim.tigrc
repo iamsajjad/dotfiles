@@ -5,8 +5,8 @@
 # To use these keybindings copy the file to your HOME directory and include
 # it from your ~/.tigrc file:
 #
-#	$ cp contrib/vim.tigrc ~/.tigrc.vim
-#	$ echo "source ~/.tigrc.vim" >> ~/.tigrc
+#   $ cp contrib/vim.tigrc ~/.tigrc.vim
+#   $ echo "source ~/.tigrc.vim" >> ~/.tigrc
 
 bind generic h scroll-left
 bind generic j move-down
