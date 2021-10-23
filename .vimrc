@@ -1,7 +1,7 @@
 
 " ... .vimrc
 
-" configure vim / neovim with .config/vim directory
+" configure vim with .config/vim directory
 if isdirectory($HOME."/.config/vim")
   " config files
   source $HOME/.config/vim/config/config.vim
