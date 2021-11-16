@@ -6,6 +6,12 @@ local U = require("plugins.config.lsp.utilities")
 
 local capabilities = U.capabilities()
 
+-- languages servers flags
+local flags = {
+  allow_incremental_sync = true,
+  debounce_text_changes = 200,
+}
+
 -- make runtime files discoverable to the server
 local runtime_path = vim.split(package.path, ";")
 table.insert(runtime_path, "lua/?.lua")
@@ -14,6 +20,7 @@ table.insert(runtime_path, "lua/?/init.lua")
 -- Lua
 config.sumneko_lua.setup({
   cmd = { "lua-language-server" },
+  flags = flags,
   capabilities = capabilities,
   on_attach = function(client, buffer)
     U.disable_formatting(client)
@@ -47,6 +54,7 @@ config.sumneko_lua.setup({
 
 -- Rust
 config.rust_analyzer.setup({
+  flags = flags,
   capabilities = capabilities,
   on_attach = function(client, buffer)
     U.disable_formatting(client)
@@ -67,6 +75,7 @@ config.rust_analyzer.setup({
 
 -- Zig
 config.zls.setup({
+  flags = flags,
   capabilities = capabilities,
   on_attach = function(client, buffer)
     U.disable_formatting(client)
@@ -76,6 +85,7 @@ config.zls.setup({
 
 -- Golang
 config.gopls.setup({
+  flags = flags,
   capabilities = capabilities,
   on_attach = function(client, buffer)
     U.disable_formatting(client)
@@ -85,6 +95,7 @@ config.gopls.setup({
 
 -- Typescript
 config.tsserver.setup({
+  flags = flags,
   capabilities = capabilities,
   on_attach = function(client, buffer)
     U.disable_formatting(client)
@@ -94,6 +105,7 @@ config.tsserver.setup({
 
 -- Python
 config.pyright.setup({
+  flags = flags,
   capabilities = capabilities,
   on_attach = function(client, buffer)
     U.disable_formatting(client)
@@ -102,6 +114,7 @@ config.pyright.setup({
 })
 -- Eslint
 config.eslint.setup({
+  flags = flags,
   capabilities = capabilities,
   on_attach = function(client)
     U.disable_formatting(client)
@@ -110,6 +123,7 @@ config.eslint.setup({
 
 -- Json
 config.jsonls.setup({
+  flags = flags,
   capabilities = capabilities,
   on_attach = function(client, buffer)
     U.disable_formatting(client)
