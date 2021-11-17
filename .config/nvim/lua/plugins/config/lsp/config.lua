@@ -12,6 +12,16 @@ local flags = {
   debounce_text_changes = 200,
 }
 
+-- configure native diagnostics
+vim.diagnostic.config({
+  virtual_text = {
+    source = "always",
+  },
+  float = {
+    source = "always",
+  },
+})
+
 -- make runtime files discoverable to the server
 local runtime_path = vim.split(package.path, ";")
 table.insert(runtime_path, "lua/?.lua")
