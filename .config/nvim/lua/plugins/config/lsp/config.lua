@@ -83,6 +83,16 @@ config.rust_analyzer.setup({
   },
 })
 
+-- Golang
+config.gopls.setup({
+  flags = flags,
+  capabilities = capabilities,
+  on_attach = function(client, buffer)
+    U.disable_formatting(client)
+    U.mappings(buffer)
+  end,
+})
+
 -- Zig
 config.zls.setup({
   flags = flags,
@@ -93,13 +103,12 @@ config.zls.setup({
   end,
 })
 
--- Golang
-config.gopls.setup({
+-- Eslint
+config.eslint.setup({
   flags = flags,
   capabilities = capabilities,
-  on_attach = function(client, buffer)
+  on_attach = function(client)
     U.disable_formatting(client)
-    U.mappings(buffer)
   end,
 })
 
@@ -120,14 +129,6 @@ config.pyright.setup({
   on_attach = function(client, buffer)
     U.disable_formatting(client)
     U.mappings(buffer)
-  end,
-})
--- Eslint
-config.eslint.setup({
-  flags = flags,
-  capabilities = capabilities,
-  on_attach = function(client)
-    U.disable_formatting(client)
   end,
 })
 
