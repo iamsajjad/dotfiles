@@ -132,6 +132,16 @@ config.pyright.setup({
   end,
 })
 
+-- Yaml
+config.yamlls.setup({
+  flags = flags,
+  capabilities = capabilities,
+  on_attach = function(client, buffer)
+    U.disable_formatting(client)
+    U.mappings(buffer)
+  end,
+})
+
 -- Json
 config.jsonls.setup({
   flags = flags,
