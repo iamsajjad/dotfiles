@@ -52,22 +52,22 @@ alias bd='cd "$OLDPWD"'
 alias rmd='/bin/rm  --recursive --force --verbose '
 
 # alias's for multiple directory listing commands
-alias ls='ls -a --g --color=always'                         # add colors and file type extensions
-alias la='ls -Alh --g --color=always'                       # show hidden files
-alias lx='ls -lXBh'                                         # sort by extension
-alias lk='ls -lSrh'                                         # sort by size
-alias lc='ls -lcrh'                                         # sort by change time
-alias lu='ls -lurh'                                         # sort by access time
-alias lr='ls -lRh'                                          # recursive ls
-alias lt='ls -ltrh'                                         # sort by date
-alias lm='ls -alh |more'                                    # pipe through 'more'
-alias lw='ls -xAh'                                          # wide listing format
-alias ll='ls -Fls'                                          # long listing format
-alias labc='ls -lap'                                        # alphabetical sort
-alias lf='ls -l | egrep -v "^d"'                            # files only
-alias ldir='ls -l | egrep "^d"'                             # directories only
-alias left='ls -t -1'                                       # Sort by modification time
-alias count='find . -type f | wc -l'                        # count files
+alias ls='exa --group-directories-first --color=always'             # add colors and file type extensions
+alias la='exa -a --group-directories-first --color=always'          # show hidden files
+alias lx='exa -al --sort=extension'                                 # sort by extension
+alias lk='exa -al --sort=filesize'                                  # sort by size
+alias lc='exa -al --sort=modified'                                  # sort by change time
+alias lu='exa -al --sort=accessed'                                  # sort by access time
+alias lr='exa -al --recurse'                                        # recursive ls
+alias lt='exa -al --sort=created'                                   # sort by date
+alias lm='exa -al --group-directories-first --color=always | more'  # pipe through 'more'
+alias lw='exa -a --across --group-directories-first --color=always' # wide listing format
+alias ll='exa -al --group-directories-first --color=always'         # long listing format
+alias lg='exa -al --git --group-directories-first --color=always'   # long listing format
+alias labc='exa -al --sort=filename'                                # alphabetical sort
+alias lf='exa -al | egrep -v "^d"'                                  # files only
+alias ldir='exa -al | egrep "^d"'                                   # directories only
+alias count='find . -type f | wc -l'                                # count files
 
 # alias chmod commands
 alias mx='chmod a+x'
