@@ -1,4 +1,4 @@
 ..
   ... readme.rst
 
-``scripts config directory``
+``dotfiles scripts directory``

@@ -1,4 +1,0 @@
-
-Dotfiles Scripts Directory
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
