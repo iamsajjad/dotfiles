@@ -3,6 +3,9 @@
 
 local U = require("core.utilities")
 
+-- setup hop
+require('hop').setup()
+
 -- bindings
 -- hop word
 U.map("n", "<leader>hw", "<CMD>HopWord<CR>", { noremap = true })
