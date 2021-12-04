@@ -30,6 +30,13 @@ return require("packer").startup({
     })
 
     use({
+      "EdenEast/nightfox.nvim",
+      config = function()
+        require("neovim.plugins.config.interface.nightfox")
+      end,
+    })
+
+    use({
       "nvim-lualine/lualine.nvim",
       event = "BufEnter",
       config = function()
