@@ -242,7 +242,6 @@ use({
 
     use({
       "jose-elias-alvarez/null-ls.nvim",
-      after = "nvim-lspconfig",
       config = function()
         require("neovim.plugins.config.lsp.nullls")
       end,

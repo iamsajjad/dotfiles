@@ -2,11 +2,12 @@
 -- ... nullls.lua
 
 local nls = require("null-ls")
+local U = require("neovim.plugins.config.lsp.utilities")
 
 local fmt = nls.builtins.formatting
 
 -- configuring null-ls
-nls.config({
+nls.setup({
   sources = {
     fmt.trim_whitespace.with({
       filetypes = { "text", "sh", "zsh", "yaml", "toml", "make", "conf", "tmux" },
@@ -30,13 +31,11 @@ nls.config({
     fmt.gofmt,
     fmt.zigfmt,
   },
-})
 
--- setting up null-ls server
--- NOTE: don't move this setup() call elsewhere
-require("lspconfig")["null-ls"].setup({
-  on_attach = function(client)
-    require("neovim.plugins.config.lsp.utilities").fmt_on_save(client)
+  -- setting up null-ls server
+  on_attach = function(client, bufnr)
+    U.fmt_on_save(client)
+    U.mappings(bufnr)
   end,
 })
 
