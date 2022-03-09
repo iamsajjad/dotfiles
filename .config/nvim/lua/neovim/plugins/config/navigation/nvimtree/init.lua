@@ -93,6 +93,18 @@ require("nvim-tree").setup({
     args = {},
   },
 
+  git = {
+
+    -- git configuration in the directory tree
+    enable = true,
+
+    -- hide ignored files and directories
+    ignore = true,
+
+    -- timeout
+    timeout = 500,
+  },
+
   view = {
 
     -- width of the window, can be either a number (columns) or a string in `%`, for left or right side placement
