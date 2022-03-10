@@ -1,12 +1,15 @@
 
 -- ... endspace.lua
 
-local cmd = vim.api.nvim_command
+local api = vim.api
 
-local autwo = require("neovim.core.autwo")
+local endspace = api.nvim_create_augroup("EndSpace", { clear = true })
 
 -- deletes any trailing whitespace at the end of each line.
-autwo.BufWritePre = function()
-  cmd("%s/\\s\\+$//e")
-end
+api.nvim_create_autocmd("BufWritePre", {
+  group = endspace,
+  callback = function()
+    api.nvim_command("%s/\\s\\+$//e")
+  end,
+})
 
