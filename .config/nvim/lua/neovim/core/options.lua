@@ -28,8 +28,8 @@ opt.relativenumber = true
 opt.signcolumn = "yes"
 opt.cursorline = true
 
--- disable affecting indent-blankline
-opt.colorcolumn = "99999"
+-- visual vertical line or lines useful for align text
+opt.colorcolumn = "+1"
 
 -- tabs and lines
 opt.expandtab = true
