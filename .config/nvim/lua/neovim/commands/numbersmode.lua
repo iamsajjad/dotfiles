@@ -1,17 +1,24 @@
 
 -- ... numbersmode.lua
 
+local api = vim.api
 local opt = vim.opt
 
-local autwo = require("neovim.core.autwo")
+local numbersmode = api.nvim_create_augroup("NumbersMode", { clear = true })
 
 -- use absolute numbers in insert mode
-autwo.InsertEnter = function()
-  opt.relativenumber = false
-end
+api.nvim_create_autocmd("InsertEnter", {
+  group = numbersmode,
+  callback = function()
+    opt.relativenumber = false
+  end,
+})
 
 -- use relative numbers in normal mode
-autwo.InsertLeave = function()
-  opt.relativenumber = true
-end
+api.nvim_create_autocmd("InsertLeave", {
+  group = numbersmode,
+  callback = function()
+    opt.relativenumber = true
+  end,
+})
 
