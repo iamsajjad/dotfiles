@@ -1,12 +1,15 @@
 
 -- ... checktime.lua
 
-local cmd = vim.api.nvim_command
+local api = vim.api
 
-local autwo = require("neovim.core.autwo")
+local checktime = api.nvim_create_augroup("CheckTime", { clear = true })
 
 -- checks for changes from outside the file
-autwo.CursorHold = function()
-  cmd("checktime")
-end
+api.nvim_create_autocmd("CursorHold", {
+  group = checktime,
+  callback = function()
+    api.nvim_command("checktime")
+  end,
+})
 
