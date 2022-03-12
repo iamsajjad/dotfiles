@@ -2,6 +2,7 @@
 -- ... init.lua
 
 local g = vim.g
+local api = vim.api
 
 local U = require("neovim.core.utilities")
 
@@ -150,12 +151,14 @@ require("nvim-tree").setup({
 
 U.map("n", "<C-n>", "<CMD>NvimTreeToggle<CR>")
 
-require("neovim.core.autwo").group("NvimTreeOverrides", function(grp)
-  grp.FileType = {
-    "NvimTree",
-    function()
-      vim.api.nvim_win_set_option(0, "wrap", false)
-    end,
-  }
-end)
+local nvimtree = api.nvim_create_augroup("NvimTree", { clear = true })
+
+-- open help vertically and press q to exit
+api.nvim_create_autocmd("FileType", {
+  group = nvimtree,
+  pattern = "NvimTree",
+  callback = function()
+    api.nvim_win_set_option(0, "wrap", false)
+  end,
+})
 
