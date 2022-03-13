@@ -1,16 +1,24 @@
 
 -- ... filetypes.lua
 
-local autwo = require("neovim.core.autwo")
+-- disable vim-based filetype plugin
+vim.g.did_load_filetypes = 0
 
-local events = "BufNewFile,BufRead"
+-- enable lua-based filetype plugin
+vim.g.do_filetype_lua = 1
 
-autwo.group("ExtraFileTypes", {
-  { events, "*.env*", "set ft=sh" },
-  { events, "*.mdx", "set ft=markdown" },
-  { events, "*.mjml", "set ft=html" },
-  { events, "*tmux*", "set ft=tmux" },
-  { events, ".eslintignore,.prettierignore,*.conf", "set ft=conf" },
-  { events, ".eslintrc,.prettierrc,*.json*", "set ft=json" },
+-- custom filetypes
+vim.filetype.add({
+  filename = {},
+  extension = {
+    conf = "conf",
+    eslintrc = "json",
+    prettierrc = "json",
+    mdx = "markdown",
+  },
+  pattern = {
+    [".*%.env.*"] = "sh",
+    [".*ignore"] = "conf",
+  },
 })
 
