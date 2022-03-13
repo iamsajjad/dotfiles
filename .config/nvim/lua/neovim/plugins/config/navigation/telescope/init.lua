@@ -48,7 +48,7 @@ function _G.__telescope_open(fn)
 end
 
 -- ctrl-p = fuzzy finder
-U.map("n", "<C-P>", "<CMD>lua __telescope_open('find_files')<CR>")
+U.map("n", "<C-p>", "<CMD>lua __telescope_open('find_files')<CR>")
 
 -- fuzzy find active buffers
 U.map("n", "'b", "<CMD>lua __telescope_open('buffers')<CR>")
