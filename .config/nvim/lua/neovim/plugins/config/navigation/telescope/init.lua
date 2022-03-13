@@ -65,3 +65,6 @@ U.map("n", "'c", "<CMD>lua __telescope_open('git_status')<CR>")
 -- fuzzy find register
 U.map("n", "'g", "<CMD>lua __telescope_open('registers')<CR>")
 
+-- fuzzy find help page tag
+U.map("n", "'h", "<CMD>lua __telescope_open('help_tags')<CR>")
+
