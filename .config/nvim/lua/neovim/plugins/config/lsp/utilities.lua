@@ -31,6 +31,14 @@ function U.disable_formatting(client)
   client.resolved_capabilities.document_range_formatting = false
 end
 
+---make luajit runtime files discoverable to the server
+function U.get_luajit_path()
+  local luajit_path = vim.split(package.path, ";")
+  table.insert(luajit_path, "lua/?.lua")
+  table.insert(luajit_path, "lua/?/init.lua")
+  return luajit_path
+end
+
 ---Diagnostic mappings
 map("n", "<space>e", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
 map("n", "[d", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)

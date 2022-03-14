@@ -22,11 +22,6 @@ vim.diagnostic.config({
   },
 })
 
--- make runtime files discoverable to the server
-local runtime_path = vim.split(package.path, ";")
-table.insert(runtime_path, "lua/?.lua")
-table.insert(runtime_path, "lua/?/init.lua")
-
 -- Lua
 config.sumneko_lua.setup({
   cmd = { "lua-language-server" },
@@ -45,7 +40,7 @@ config.sumneko_lua.setup({
       runtime = {
         -- tell the language server which version of lua you're using (most likely luajit in the case of neovim)
         version = "LuaJIT",
-        path = runtime_path,
+        path = U.get_luajit_path(),
       },
       diagnostics = {
         globals = { "vim" },
