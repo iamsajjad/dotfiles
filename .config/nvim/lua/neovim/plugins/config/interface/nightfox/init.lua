@@ -25,8 +25,12 @@ local options = {
     functions = "none",
     -- style that is applied to keywords
     keywords = "none",
+    -- style that is applied to numbers
+    numbers = "none",
     -- style that is applied to strings
     strings = "none",
+    -- style that is applied to types
+    types = "none",
     -- style that is applied to variables
     variables = "none",
   },
