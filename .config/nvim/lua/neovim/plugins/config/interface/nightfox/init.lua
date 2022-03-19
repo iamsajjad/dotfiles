@@ -135,5 +135,5 @@ nightfox.setup({ options = options, pallets = pallets, specs = specs, groups = g
 
 -- apply one of nightfox colorscheme ( nightfox, dayfox, dawnfox, duskfox, nordfox )
 -- with ( options, pallets, specs, groups ) configurations above
--- cmd("colorscheme nightfox")
+-- cmd("colorscheme duskfox")
 
