@@ -43,6 +43,9 @@ local config = {
     theme = bubbles,
     component_separators = "|",
     section_separators = { left = "", right = "" },
+
+    -- unified global statusline
+    globalstatus = true,
   },
   sections = {
     lualine_a = {
