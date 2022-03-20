@@ -1,7 +1,7 @@
 
--- ... eviline.lua
+-- ... evilline.lua
 
--- eviline config for lualine
+-- evilline config for lualine
 local lualine = require("lualine")
 
 -- color table for highlights
@@ -231,6 +231,6 @@ ins_right({
   padding = { left = 1 },
 })
 
--- setup lualine with eviline config
+-- setup lualine with evilline config
 lualine.setup(config)
 
