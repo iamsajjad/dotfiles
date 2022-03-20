@@ -42,6 +42,9 @@ local config = {
     component_separators = "",
     section_separators = "",
 
+    -- unified global statusline
+    globalstatus = true,
+
     theme = {
 
       -- we are going to use lualine_c an lualine_x as left and
