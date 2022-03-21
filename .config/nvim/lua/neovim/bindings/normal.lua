@@ -83,7 +83,7 @@ U.map("n", "<leader>j", ":move .+1<CR>==", { noremap = true })
 U.map("n", "<leader>t", ":tabedit ~/.notes<CR>", { noremap = true })
 
 -- duplicate current line >>> 'yy' >>> 'p'
-U.map("n", "<C-d>", "mzyyp`z", { noremap = false })
+U.map("n", "<A-p>", "mzyyp`z", { noremap = false })
 
 -- map key to dismiss search highlighted ness
 U.map("n", "<BS>", ":nohlsearch<CR>", { noremap = true })
