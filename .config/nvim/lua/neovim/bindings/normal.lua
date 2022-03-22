@@ -70,7 +70,7 @@ U.map("o", "A", ":<C-U>normal! mzggVG<CR>`z")
 U.map("x", "A", ":<C-U>normal! ggVG<CR>")
 
 -- replace the word under cursor
-U.map("n", "<leader>r", ":%s/<C-R><C-W>//gI<left><left><left>", { noremap = true })
+U.map("n", "<leader>r", ":%s/<C-R><C-W>//gI<left><left><left>", { noremap = true, silent = false })
 
 -- taggle between split files
 U.map("n", "<tab>", "<C-w>w", { noremap = true })
