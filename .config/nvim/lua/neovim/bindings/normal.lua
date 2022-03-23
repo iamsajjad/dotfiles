@@ -49,7 +49,7 @@ U.map("n", "tk", ":tabnext<CR>", { noremap = true })
 U.map("n", "tj", ":tabprev<CR>", { noremap = true })
 U.map("n", "tl", ":tablast<CR>", { noremap = true })
 U.map("n", "tt", ":tabedit<Space>", { noremap = true, silent = false })
-U.map("n", "tn", ":tabnext<Space>", { noremap = true })
+U.map("n", "tn", ":tabnext<Space>", { noremap = true, silent = false })
 U.map("n", "tm", ":tabm<Space>", { noremap = true })
 U.map("n", "td", ":tabclose<CR>", { noremap = true })
 
