@@ -50,7 +50,7 @@ U.map("n", "tj", ":tabprev<CR>", { noremap = true })
 U.map("n", "tl", ":tablast<CR>", { noremap = true })
 U.map("n", "tt", ":tabedit<Space>", { noremap = true, silent = false })
 U.map("n", "tn", ":tabnext<Space>", { noremap = true, silent = false })
-U.map("n", "tm", ":tabm<Space>", { noremap = true })
+U.map("n", "tm", ":tabm<Space>", { noremap = true, silent = false })
 U.map("n", "td", ":tabclose<CR>", { noremap = true })
 
 -- fold mapping
