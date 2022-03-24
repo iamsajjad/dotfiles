@@ -36,6 +36,13 @@ return require("packer").startup({
     })
 
     use({
+      "rebelot/kanagawa.nvim",
+      config = function()
+        require("neovim.plugins.config.interface.kanagawa")
+      end,
+    })
+
+    use({
       "nvim-lualine/lualine.nvim",
       event = "BufEnter",
       config = function()
