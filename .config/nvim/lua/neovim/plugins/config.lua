@@ -9,7 +9,6 @@ cmd([[packadd packer.nvim]])
 return require("packer").startup({
 
   function(use)
-
     -- packer can manage itself
     use({ "wbthomason/packer.nvim", opt = true })
 
@@ -51,7 +50,8 @@ return require("packer").startup({
         require("neovim.plugins.config.interface.bufferline")
       end,
     })
-use({
+
+    use({
       {
         "nvim-treesitter/nvim-treesitter",
         event = "CursorHold",
