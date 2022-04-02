@@ -46,11 +46,11 @@ local options = {
   modules = {},
 }
 
--- pallets are the base color defines of a colorscheme.
--- you can override these pallets for each colorscheme defined by nightfox
-local pallets = {
+-- palettes are the base color defines of a colorscheme.
+-- you can override these palettes for each colorscheme defined by nightfox
+local palettes = {
   nightfox = {
-    -- each pallet defines these colors:
+    -- each palette defines these colors:
     --   black, red, green, yellow, blue, magenta, cyan, white, orange, pink
     --
     -- these colors have 3 shades: base, bright, and dim
@@ -61,7 +61,7 @@ local pallets = {
     -- defining multiple shades is done by passing a table
     -- blue = { base = "#4d688e", bright = "#4e75aa", dim = "#485e7d", }
 
-    -- a pallet also defines the following:
+    -- a palette also defines the following:
     --   bg0, bg1, bg2, bg3, bg4, fg0, fg1, fg2, fg3, sel0, sel1, comment
     --
     -- these are the different foreground and background shades used by the theme.
@@ -77,31 +77,31 @@ local pallets = {
     -- comment = "#60728a",
   },
   dayfox = {
-    -- pallets config for dayfox
+    -- palettes config for dayfox
   },
   dawnfox = {
-    -- pallets config for dawnfox
+    -- palettes config for dawnfox
   },
   duskfox = {
-    -- pallets config for duskfox
+    -- palettes config for duskfox
   },
   nordfox = {
-    -- pallets config for nordfox
+    -- palettes config for nordfox
   },
 }
 
--- spec's (specifications) are a mapping of pallets to logical groups that will be
+-- spec's (specifications) are a mapping of palettes to logical groups that will be
 -- used by the groups. some examples of the groups that specs map would be:
 --   - syntax groups (functions, types, keywords, ...)
 --   - diagnostic groups (error, warning, info, hints)
 --   - git groups (add, removed, changed)
 
--- you can override these just like pallets
+-- you can override these just like palettes
 local specs = {
   nightfox = {
     syntax = {
       -- specs allow you to define a value using either a color or template. if the string does
-      -- start with `#` the string will be used as the path of the pallet table. defining just
+      -- start with `#` the string will be used as the path of the palette table. defining just
       -- a color uses the base version of that color.
       -- keyword = "magenta",
 
@@ -126,14 +126,14 @@ local groups = {
   -- make sure `link` is cleared to `""` so that the link will be removed.
   -- cursorline = { bg = "sel0", link = "" },
 
-  -- specs are used for the template. specs have their pallet's as a field that can be accessed
-  -- incsearch = { bg = "pallet.cyan" },
+  -- specs are used for the template. specs have their palette's as a field that can be accessed
+  -- incsearch = { bg = "palette.cyan" },
 }
 
--- load nightfox ( options, pallets, specs, groups ) configurations
-nightfox.setup({ options = options, pallets = pallets, specs = specs, groups = groups })
+-- load nightfox ( options, palettes, specs, groups ) configurations
+nightfox.setup({ options = options, palettes = palettes, specs = specs, groups = groups })
 
 -- apply one of nightfox colorscheme ( nightfox, dayfox, dawnfox, duskfox, nordfox )
--- with ( options, pallets, specs, groups ) configurations above
+-- with ( options, palettes, specs, groups ) configurations above
 -- cmd("colorscheme duskfox")
 
