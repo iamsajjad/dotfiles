@@ -10,9 +10,14 @@ return require("packer").startup({
 
   function(use)
     -- packer can manage itself
-    use({ "wbthomason/packer.nvim", opt = true })
+    use({
+      "wbthomason/packer.nvim",
+      opt = true,
+    })
 
-    use({ "nvim-lua/plenary.nvim" })
+    use({
+      "nvim-lua/plenary.nvim",
+    })
 
     use({
       "kyazdani42/nvim-web-devicons",
