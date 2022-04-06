@@ -10,6 +10,7 @@ end
 
 local modules = {
   "config",
+  "gamma",
 }
 
 for _, module in ipairs(modules) do
