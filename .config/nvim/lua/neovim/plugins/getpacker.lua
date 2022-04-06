@@ -3,7 +3,7 @@
 
 local fn = vim.fn
 
-local Packer = {}
+local PackerInitializer = {}
 
 -- to run file do :luafile %
 local clone = function()
@@ -27,7 +27,7 @@ local clone = function()
   print("( You'll need to restart now )")
 end
 
-function Packer.init()
+function PackerInitializer.init()
   if not pcall(require, "packer") then
     clone()
 
@@ -37,5 +37,5 @@ function Packer.init()
   return false
 end
 
-return Packer
+return PackerInitializer
 
