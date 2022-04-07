@@ -4,7 +4,7 @@
 local directory = "neovim.plugins" .. "."
 
 -- clone packer for first time only
-if require(directory .. "getpacker").init() then
+if not require(directory .. "getpacker").init() then
   return
 end
 
