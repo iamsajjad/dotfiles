@@ -1,10 +1,15 @@
 
 -- ... init.lua
 
+local api = vim.api
+
 local directory = "neovim.plugins" .. "."
 
 -- clone packer for first time only
-if not require(directory .. "getpacker").init() then
+if require(directory .. "getpacker").init() then
+  -- only required if you have packer in your `opt` pack
+  api.nvim_command("packadd packer.nvim")
+else
   return
 end
 

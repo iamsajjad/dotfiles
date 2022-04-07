@@ -6,7 +6,7 @@ local fn = vim.fn
 local PackerInitializer = {}
 
 -- packer `plugins manager` repository directory location
-local directory = string.format("%s/site/pack/packer/start/", fn.stdpath("data"))
+local directory = string.format("%s/site/pack/packer/opt/", fn.stdpath("data"))
 
 -- to run file do :luafile %
 function PackerInitializer.clone()
@@ -30,14 +30,14 @@ end
 function PackerInitializer.init()
   -- check if `packer.nvim` directory exists
   if fn.empty(fn.glob(directory .. "packer.nvim")) > 0 then
-    -- packer is cloned in `start` directory
-    -- if packer is not installed clone packer to `start` directory
+    -- packer is cloned in `opt` directory
+    -- if packer is not installed clone packer to `opt` directory
     PackerInitializer.clone()
 
-    -- packer is cloned in `start` directory
+    -- packer is cloned in `opt` directory
     return true
   else
-    -- packer is already exists in `start` directory
+    -- packer is already exists in `opt` directory
     return true
   end
 

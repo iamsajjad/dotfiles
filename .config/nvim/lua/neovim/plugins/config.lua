@@ -1,11 +1,6 @@
 
 -- ... config.lua
 
-local cmd = vim.api.nvim_command
-
--- only required if you have packer in your `opt` pack
-cmd([[packadd packer.nvim]])
-
 return require("packer").startup({
 
   function(use)
