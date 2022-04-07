@@ -6,7 +6,7 @@ local fn = vim.fn
 local PackerInitializer = {}
 
 -- to run file do :luafile %
-local clone = function()
+function PackerInitializer.clone()
   if fn.input("Download Packer? [ y for yes ] : ") ~= "y" then
     return
   end
@@ -29,7 +29,7 @@ end
 
 function PackerInitializer.init()
   if not pcall(require, "packer") then
-    clone()
+    PackerInitializer.clone()
 
     return true
   end
