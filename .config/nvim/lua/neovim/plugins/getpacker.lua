@@ -8,23 +8,24 @@ local PackerInitializer = {}
 -- packer `plugins manager` repository directory location
 local directory = string.format("%s/site/pack/packer/opt/", fn.stdpath("data"))
 
--- to run file do :luafile %
+-- clone `packer` to `opt` directory
 function PackerInitializer.clone()
-  if fn.input("Download Packer? [ y for yes ] : ") ~= "y" then
+  if fn.input("Packer not found in `opt` directory, Clone Packer ? [y/N] : ") ~= "y" then
     return
   end
 
   -- make packer directory
   fn.mkdir(directory, "p")
 
+  print(string.format(" %s ", "cloning `packer.nvim` ..."))
+
   -- clone packer
   local out = fn.system(
     string.format("git clone %s %s", "https://github.com/wbthomason/packer.nvim", directory .. "/packer.nvim")
   )
 
-  print(out)
-  print("Downloading packer.nvim...")
-  print("( You'll need to restart now )")
+  print(string.format("%s", out))
+  print("Restart the neovim instance to load `packer`")
 end
 
 function PackerInitializer.init()
