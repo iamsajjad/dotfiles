@@ -4,6 +4,7 @@
 local directory = "neovim.commands" .. "."
 
 local modules = {
+  "compile",
   "checktime",
   "endspace",
   "filetypes",
