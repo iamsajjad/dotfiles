@@ -6,7 +6,7 @@
 
 require("nvim-treesitter.configs").setup({
   -- nvim-treesitter/nvim-treesitter (self config)
-  ensure_installed = "maintained",
+  ensure_installed = "all",
   highlight = {
     enable = true,
 
