@@ -13,7 +13,7 @@ local formatting = vim.api.nvim_create_augroup("Formatting", { clear = true })
 ---common format-on-save for lsp servers that implements formatting
 ---@param client table
 ---@param buffer integer
-function U.fmt_on_save(client, buffer)
+function U.format_on_save(client, buffer)
   if client.supports_method("textDocument/formatting") then
     vim.api.nvim_create_autocmd("BufWritePre", {
       group = formatting,

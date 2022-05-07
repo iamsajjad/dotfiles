@@ -34,7 +34,7 @@ nls.setup({
 
   -- setting up null-ls server
   on_attach = function(client, bufnr)
-    U.fmt_on_save(client, bufnr)
+    U.format_on_save(client, bufnr)
     U.mappings(bufnr)
   end,
 })
