@@ -27,8 +27,7 @@ config.sumneko_lua.setup({
   cmd = { "lua-language-server" },
   flags = flags,
   capabilities = capabilities,
-  on_attach = function(client, buffer)
-    U.disable_formatting(client)
+  on_attach = function(_, buffer)
     U.mappings(buffer)
   end,
   settings = {
@@ -61,8 +60,7 @@ config.sumneko_lua.setup({
 config.rust_analyzer.setup({
   flags = flags,
   capabilities = capabilities,
-  on_attach = function(client, buffer)
-    U.disable_formatting(client)
+  on_attach = function(_, buffer)
     U.mappings(buffer)
   end,
   settings = {
@@ -82,8 +80,7 @@ config.rust_analyzer.setup({
 config.gopls.setup({
   flags = flags,
   capabilities = capabilities,
-  on_attach = function(client, buffer)
-    U.disable_formatting(client)
+  on_attach = function(_, buffer)
     U.mappings(buffer)
   end,
 })
@@ -92,8 +89,7 @@ config.gopls.setup({
 config.zls.setup({
   flags = flags,
   capabilities = capabilities,
-  on_attach = function(client, buffer)
-    U.disable_formatting(client)
+  on_attach = function(_, buffer)
     U.mappings(buffer)
   end,
 })
@@ -102,17 +98,14 @@ config.zls.setup({
 config.eslint.setup({
   flags = flags,
   capabilities = capabilities,
-  on_attach = function(client)
-    U.disable_formatting(client)
-  end,
+  on_attach = function(_) end,
 })
 
 -- Typescript
 config.tsserver.setup({
   flags = flags,
   capabilities = capabilities,
-  on_attach = function(client, buffer)
-    U.disable_formatting(client)
+  on_attach = function(_, buffer)
     U.mappings(buffer)
   end,
 })
@@ -121,8 +114,7 @@ config.tsserver.setup({
 config.pyright.setup({
   flags = flags,
   capabilities = capabilities,
-  on_attach = function(client, buffer)
-    U.disable_formatting(client)
+  on_attach = function(_, buffer)
     U.mappings(buffer)
   end,
 })
@@ -131,8 +123,7 @@ config.pyright.setup({
 config.yamlls.setup({
   flags = flags,
   capabilities = capabilities,
-  on_attach = function(client, buffer)
-    U.disable_formatting(client)
+  on_attach = function(_, buffer)
     U.mappings(buffer)
   end,
 })
@@ -141,8 +132,7 @@ config.yamlls.setup({
 config.jsonls.setup({
   flags = flags,
   capabilities = capabilities,
-  on_attach = function(client, buffer)
-    U.disable_formatting(client)
+  on_attach = function(_, buffer)
     U.mappings(buffer)
   end,
 })

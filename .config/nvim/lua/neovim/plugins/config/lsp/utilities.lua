@@ -11,7 +11,7 @@ local U = {}
 ---common format-on-save for lsp servers that implements formatting
 ---@param client table
 function U.fmt_on_save(client)
-  if client.resolved_capabilities.document_formatting then
+  if client.supports_method("textDocument/formatting") then
     api.nvim_command("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
   end
 end
@@ -22,13 +22,6 @@ function U.capabilities()
   local capabilities = vim.lsp.protocol.make_client_capabilities()
 
   return require("cmp_nvim_lsp").update_capabilities(capabilities)
-end
-
----disable formatting for servers. handles by null-ls
----@param client table
-function U.disable_formatting(client)
-  client.resolved_capabilities.document_formatting = false
-  client.resolved_capabilities.document_range_formatting = false
 end
 
 ---make luajit runtime files discoverable to the server
