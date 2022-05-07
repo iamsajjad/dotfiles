@@ -8,11 +8,23 @@ local opts = { noremap = true, silent = true }
 
 local U = {}
 
+local formatting = vim.api.nvim_create_augroup("Formatting", { clear = true })
+
 ---common format-on-save for lsp servers that implements formatting
 ---@param client table
-function U.fmt_on_save(client)
+---@param buffer integer
+function U.fmt_on_save(client, buffer)
   if client.supports_method("textDocument/formatting") then
-    api.nvim_command("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
+    vim.api.nvim_create_autocmd("BufWritePre", {
+      group = formatting,
+      buffer = buffer,
+      callback = function()
+        vim.lsp.buf.format({
+          timeout_ms = 3000,
+          buffer = buffer,
+        })
+      end,
+    })
   end
 end
 
