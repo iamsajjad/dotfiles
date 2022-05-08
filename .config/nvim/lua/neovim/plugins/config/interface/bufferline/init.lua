@@ -85,10 +85,15 @@ local config = {
       end
     end,
 
-    -- offsets examples
-    -- {{ filetype = 'NvimTree', text = 'Explorer', highlight = 'PanelHeading', }, ... }, or
+    -- offsets example
     -- {{ function, text_align = text_align = "left" | "center" | "right" }, ... },
-    offsets = { {} },
+    offsets = {
+      {
+        filetype = "NvimTree",
+        highlight = "PanelHeading",
+        text = "NvimTree",
+      },
+    },
 
     -- whether or not to add the filetype icon highlights
     color_icons = true,
