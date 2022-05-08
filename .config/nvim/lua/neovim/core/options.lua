@@ -27,6 +27,7 @@ opt.numberwidth = 6
 opt.relativenumber = true
 opt.signcolumn = "yes"
 opt.cursorline = true
+opt.laststatus = 3
 
 -- visual vertical line or lines useful for align text
 opt.colorcolumn = "+1"
