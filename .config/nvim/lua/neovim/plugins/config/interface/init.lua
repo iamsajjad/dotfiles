@@ -15,7 +15,10 @@ end
 
 function Interface.colors(name)
   -- set or change interface colorscheme
-  api.nvim_command(("colorscheme %s"):format(name))
+  local ok, _ = pcall(api.nvim_command, ("colorscheme %s"):format(name))
+  if not ok then
+    api.nvim_command("colorscheme default")
+  end
 end
 
 return Interface
