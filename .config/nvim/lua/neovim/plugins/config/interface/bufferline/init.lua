@@ -93,6 +93,11 @@ local config = {
         highlight = "PanelHeading",
         text = "NvimTree",
       },
+      {
+        filetype = "packer",
+        highlight = "PanelHeading",
+        text = "Packer",
+      },
     },
 
     -- whether or not to add the filetype icon highlights
