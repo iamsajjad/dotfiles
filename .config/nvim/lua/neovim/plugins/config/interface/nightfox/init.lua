@@ -106,7 +106,8 @@ local palettes = {
 
 -- you can override these just like palettes
 local specs = {
-  nightfox = {
+  -- everything defined under `all` will be applied to each style.
+  all = {
     syntax = {
       -- specs allow you to define a value using either a color or template. if the string does
       -- start with `#` the string will be used as the path of the palette table. defining just
@@ -121,6 +122,11 @@ local specs = {
       -- a color define can also be used
       -- changed = "#f4a261",
     },
+  },
+  -- a specific style's value will be used over the `all`'s value
+  nightfox = {
+    syntax = {},
+    git = {},
   },
 }
 
