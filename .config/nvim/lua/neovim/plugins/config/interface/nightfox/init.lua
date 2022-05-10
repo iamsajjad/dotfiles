@@ -49,7 +49,8 @@ local options = {
 -- palettes are the base color defines of a colorscheme.
 -- you can override these palettes for each colorscheme defined by nightfox
 local palettes = {
-  nightfox = {
+  -- everything defined under `all` will be applied to each style.
+  all = {
     -- each palette defines these colors:
     --   black, red, green, yellow, blue, magenta, cyan, white, orange, pink
     --
@@ -75,6 +76,10 @@ local palettes = {
 
     -- comment is the definition of the comment color.
     -- comment = "#60728a",
+  },
+  -- a specific style's value will be used over the `all`'s value
+  nightfox = {
+    -- palettes config for nightfox
   },
   dayfox = {
     -- palettes config for dayfox
