@@ -88,6 +88,9 @@ local palettes = {
   nordfox = {
     -- palettes config for nordfox
   },
+  terafox = {
+    -- palettes config for terafox
+  },
 }
 
 -- spec's (specifications) are a mapping of palettes to logical groups that will be
@@ -133,7 +136,7 @@ local groups = {
 -- load nightfox ( options, palettes, specs, groups ) configurations
 nightfox.setup({ options = options, palettes = palettes, specs = specs, groups = groups })
 
--- apply one of nightfox colorscheme ( nightfox, dayfox, dawnfox, duskfox, nordfox )
+-- apply one of nightfox colorscheme ( nightfox, dayfox, dawnfox, duskfox, nordfox, terafox )
 -- with ( options, palettes, specs, groups ) configurations above
 -- cmd("colorscheme duskfox")
 
