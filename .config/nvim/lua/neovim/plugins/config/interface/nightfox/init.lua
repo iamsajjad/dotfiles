@@ -136,12 +136,19 @@ local specs = {
 --
 -- just like `spec` groups support templates. this time the template is based on a spec object.
 local groups = {
-  -- by default nightfox links some groups together. `cursorline` is one of these groups. when overriding
-  -- make sure `link` is cleared to `""` so that the link will be removed.
-  -- cursorline = { bg = "sel0", link = "" },
+  -- everything defined under `all` will be applied to each style.
+  all = {
+    -- by default nightfox links some groups together. `CursorColumn` is one of these groups. when overriding
+    -- make sure `link` is cleared to `""` so that the link will be removed.
+    -- CursorColumn = { bg = "sel0", link = "" },
 
-  -- specs are used for the template. specs have their palette's as a field that can be accessed
-  -- incsearch = { bg = "palette.cyan" },
+    -- specs are used for the template. specs have their palette's as a field that can be accessed
+    -- IncSearch = { bg = "palette.cyan" },
+  },
+  -- a specific style's value will be used over the `all`'s value
+  nightfox = {
+    -- groups config for nightfox
+  },
 }
 
 -- load nightfox ( options, palettes, specs, groups ) configurations
