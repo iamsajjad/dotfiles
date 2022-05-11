@@ -8,7 +8,7 @@ local nightfox = require("nightfox")
 -- it will be taken from the default configurations
 local options = {
   -- compiled file's destination location
-  -- compile_path = utilities.join_paths(vim.fn.stdpath("cache"), "nightfox"),
+  compile_path = vim.fn.stdpath("cache") .. "/nightfox",
   -- compiled file suffix
   compile_file_suffix = "_compiled",
   -- disable setting background
