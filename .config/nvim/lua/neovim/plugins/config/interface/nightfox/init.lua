@@ -31,6 +31,8 @@ local options = {
     keywords = "none",
     -- style that is applied to numbers
     numbers = "none",
+    -- style that is applied to operators
+    operators = "none",
     -- style that is applied to strings
     strings = "none",
     -- style that is applied to types
