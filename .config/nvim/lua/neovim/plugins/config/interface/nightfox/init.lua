@@ -23,6 +23,8 @@ local options = {
     comments = "italic",
     -- style that is applied to conditionals
     conditionals = "none",
+    -- style that is applied to constants
+    constants = "none",
     -- style that is applied to functions
     functions = "none",
     -- style that is applied to keywords
