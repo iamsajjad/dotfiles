@@ -142,6 +142,10 @@ local specs = {
     syntax = {},
     git = {},
   },
+  duskfox = {
+    syntax = {},
+    git = {},
+  },
 }
 
 -- groups are the highlight group definitions. the keys of this table are the name of the highlight
