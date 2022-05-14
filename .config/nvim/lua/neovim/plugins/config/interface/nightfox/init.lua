@@ -150,6 +150,10 @@ local specs = {
     syntax = {},
     git = {},
   },
+  terafox = {
+    syntax = {},
+    git = {},
+  },
 }
 
 -- groups are the highlight group definitions. the keys of this table are the name of the highlight
