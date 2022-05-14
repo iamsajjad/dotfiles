@@ -175,6 +175,9 @@ local groups = {
   nightfox = {
     -- groups config for nightfox
   },
+  dayfox = {
+    -- groups config for dayfox
+  },
 }
 
 -- load nightfox ( options, palettes, specs, groups ) configurations
