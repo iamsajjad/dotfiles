@@ -184,6 +184,9 @@ local groups = {
   duskfox = {
     -- groups config for duskfox
   },
+  nordfox = {
+    -- groups config for nordfox
+  },
 }
 
 -- load nightfox ( options, palettes, specs, groups ) configurations
