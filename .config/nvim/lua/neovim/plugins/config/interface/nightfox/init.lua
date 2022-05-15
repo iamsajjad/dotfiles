@@ -187,6 +187,9 @@ local groups = {
   nordfox = {
     -- groups config for nordfox
   },
+  terafox = {
+    -- groups config for terafox
+  },
 }
 
 -- load nightfox ( options, palettes, specs, groups ) configurations
