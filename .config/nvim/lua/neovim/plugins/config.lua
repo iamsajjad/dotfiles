@@ -66,6 +66,13 @@ return require("packer").startup({
     })
 
     use({
+      "folke/twilight.nvim",
+      config = function()
+        require("neovim.plugins.config.interface.twilight")
+      end,
+    })
+
+    use({
       {
         "nvim-treesitter/nvim-treesitter",
         event = "CursorHold",
