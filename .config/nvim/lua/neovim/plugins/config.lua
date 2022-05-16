@@ -59,6 +59,13 @@ return require("packer").startup({
     })
 
     use({
+      "folke/zen-mode.nvim",
+      config = function()
+        require("neovim.plugins.config.interface.zenmode")
+      end,
+    })
+
+    use({
       {
         "nvim-treesitter/nvim-treesitter",
         event = "CursorHold",
