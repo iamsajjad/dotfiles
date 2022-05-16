@@ -269,6 +269,14 @@ return require("packer").startup({
     })
 
     use({
+      "folke/trouble.nvim",
+      config = function()
+        require("neovim.plugins.config.lsp.trouble")
+      end,
+      requires = { "kyazdani42/nvim-web-devicons" },
+    })
+
+    use({
       {
         "hrsh7th/nvim-cmp",
         event = "InsertEnter",
