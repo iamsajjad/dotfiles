@@ -4,7 +4,10 @@
 -- vim.wo.foldmethod = 'expr'
 -- vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
 
-require("nvim-treesitter.configs").setup({
+local treesitter = require("nvim-treesitter.configs")
+
+local config = {
+
   -- nvim-treesitter/nvim-treesitter (self config)
   ensure_installed = "all",
   highlight = {
@@ -116,5 +119,8 @@ require("nvim-treesitter.configs").setup({
     highlight_definitions = { enable = true },
     -- highlight_current_scope = { enable = false },
   },
-})
+}
+
+-- load treesitter configurations
+treesitter.setup(config)
 
