@@ -6,6 +6,9 @@
 
 local treesitter = require("nvim-treesitter.configs")
 
+-- path for other treesitter plugins
+local path = "neovim.plugins.config.integration.treesitter" .. "."
+
 local config = {
 
   -- nvim-treesitter/nvim-treesitter (self config)
@@ -31,6 +34,9 @@ local config = {
       scope_incremental = "<leader>sc",
     },
   },
+
+  -- playground config
+  playground = require(path .. "playground"),
 
   -- nvim-treesitter/nvim-treesitter-textobjects
   textobjects = {
@@ -100,18 +106,6 @@ local config = {
   -- windwp/nvim-ts-autotag
   autotag = {
     enable = true,
-  },
-
-  -- nvim-treesitter/playground
-  playground = {
-    enable = true,
-    disable = {},
-
-    -- Debounced time for highlighting nodes in the playground from source code
-    updatetime = 25,
-
-    -- Whether the query persists across vim sessions
-    persist_queries = false,
   },
 
   -- nvim-treesitter/nvim-treesitter-refactor
