@@ -41,15 +41,12 @@ local config = {
   -- textobjects config
   textobjects = require(path .. "textobjects"),
 
+  -- refactor config
+  refactor = require(path .. "refactor"),
+
   -- windwp/nvim-ts-autotag
   autotag = {
     enable = true,
-  },
-
-  -- nvim-treesitter/nvim-treesitter-refactor
-  refactor = {
-    highlight_definitions = { enable = true },
-    -- highlight_current_scope = { enable = false },
   },
 }
 
