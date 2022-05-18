@@ -2,10 +2,12 @@
 -- ... init.lua
 
 local U = require("neovim.core.utilities")
+
+local telescope = require("telescope")
 local finders = require("telescope.builtin")
 local actions = require("telescope.actions")
 
-require("telescope").setup({
+local config = {
   defaults = {
     prompt_prefix = " ❯ ",
     initial_mode = "insert",
@@ -43,7 +45,10 @@ require("telescope").setup({
       case_mode = "smart_case",
     },
   },
-})
+}
+
+-- load telescope configurations
+telescope.setup(config)
 
 function _G.__telescope_open(fn)
   U.move_cursor_from_tree()
