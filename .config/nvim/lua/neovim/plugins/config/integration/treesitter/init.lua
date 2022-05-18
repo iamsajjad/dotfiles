@@ -44,10 +44,8 @@ local config = {
   -- refactor config
   refactor = require(path .. "refactor"),
 
-  -- windwp/nvim-ts-autotag
-  autotag = {
-    enable = true,
-  },
+  -- autotag config
+  autotag = require(path .. "autotag"),
 }
 
 -- load treesitter configurations
