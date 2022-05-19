@@ -1,21 +1,21 @@
 
 -- ... completion.lua
 
-local cmp = require("cmp")
+local completion = require("cmp")
 
-cmp.setup({
+local config = {
   mapping = {
-    ["<C-d>"] = cmp.mapping.scroll_docs(-4),
-    ["<C-f>"] = cmp.mapping.scroll_docs(4),
-    ["<C-q>"] = cmp.mapping.close(),
-    ["<C-y>"] = cmp.mapping.confirm({ select = true }),
-    ["<C-Space>"] = cmp.mapping.complete(),
-    ["<CR>"] = cmp.mapping.confirm({
-      behavior = cmp.ConfirmBehavior.Insert,
+    ["<C-d>"] = completion.mapping.scroll_docs(-4),
+    ["<C-f>"] = completion.mapping.scroll_docs(4),
+    ["<C-q>"] = completion.mapping.close(),
+    ["<C-y>"] = completion.mapping.confirm({ select = true }),
+    ["<C-Space>"] = completion.mapping.complete(),
+    ["<CR>"] = completion.mapping.confirm({
+      behavior = completion.ConfirmBehavior.Insert,
       select = true,
     }),
   },
-  sources = cmp.config.sources({
+  sources = completion.config.sources({
     { name = "nvim_lsp", max_item_count = 10 },
     { name = "path", max_item_count = 10 },
     { name = "luasnip", max_item_count = 5 },
@@ -26,5 +26,8 @@ cmp.setup({
       require("luasnip").lsp_expand(args.body)
     end,
   },
-})
+}
+
+-- load completion configurations
+completion.setup(config)
 
