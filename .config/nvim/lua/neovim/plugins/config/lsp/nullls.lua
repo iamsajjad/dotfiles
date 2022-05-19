@@ -1,13 +1,12 @@
 
 -- ... nullls.lua
 
-local nls = require("null-ls")
+local nullls = require("null-ls")
 local U = require("neovim.plugins.config.lsp.utilities")
 
-local fmt = nls.builtins.formatting
+local fmt = nullls.builtins.formatting
 
--- configuring null-ls
-nls.setup({
+local config = {
   sources = {
     fmt.trim_whitespace.with({
       filetypes = { "text", "sh", "zsh", "yaml", "toml", "make", "conf", "tmux" },
@@ -37,5 +36,8 @@ nls.setup({
     U.format_on_save(client, bufnr)
     U.mappings(bufnr)
   end,
-})
+}
+
+-- load nullls configurations
+nullls.setup(config)
 
