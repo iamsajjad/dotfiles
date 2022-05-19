@@ -11,9 +11,10 @@ local config = {
     fmt.trim_whitespace.with({
       filetypes = { "text", "sh", "zsh", "yaml", "toml", "make", "conf", "tmux" },
     }),
+
     -- NOTE:
-    -- 1. both needs to be enabled to so prettier can apply eslint fixes
-    -- 2. and prettierd should come first
+    -- 1. both needs to be enabled so that `prettier` can apply `eslint` fixes
+    -- 2. `prettier` should come first to prevent occasional race condition
     fmt.prettierd,
     fmt.eslint_d,
     -- fmt.prettier.with({
