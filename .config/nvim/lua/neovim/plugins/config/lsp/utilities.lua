@@ -56,22 +56,22 @@ map("n", "]d", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
 map("n", "<space>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
 
 ---LSP mappings
----@param bufnr number
-function U.mappings(bufnr)
+---@param buffer number
+function U.mappings(buffer)
   -- See `:help vim.lsp.*` for documentation on any of the below functions
-  bufmap(bufnr, "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
-  bufmap(bufnr, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
-  bufmap(bufnr, "n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
-  bufmap(bufnr, "n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
-  bufmap(bufnr, "n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
-  bufmap(bufnr, "n", "<space>wa", "<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>", opts)
-  bufmap(bufnr, "n", "<space>wr", "<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>", opts)
-  bufmap(bufnr, "n", "<space>wl", "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>", opts)
-  bufmap(bufnr, "n", "<space>D", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
-  bufmap(bufnr, "n", "<space>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
-  bufmap(bufnr, "n", "<space>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
-  bufmap(bufnr, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
-  bufmap(bufnr, "n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
+  bufmap(buffer, "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
+  bufmap(buffer, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
+  bufmap(buffer, "n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+  bufmap(buffer, "n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
+  bufmap(buffer, "n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
+  bufmap(buffer, "n", "<space>wa", "<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>", opts)
+  bufmap(buffer, "n", "<space>wr", "<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>", opts)
+  bufmap(buffer, "n", "<space>wl", "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>", opts)
+  bufmap(buffer, "n", "<space>D", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
+  bufmap(buffer, "n", "<space>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
+  bufmap(buffer, "n", "<space>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
+  bufmap(buffer, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
+  bufmap(buffer, "n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
 end
 
 return U
