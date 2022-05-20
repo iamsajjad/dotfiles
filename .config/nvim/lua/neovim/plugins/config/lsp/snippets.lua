@@ -4,20 +4,29 @@
 local types = require("luasnip.util.types")
 local U = require("neovim.core.utilities")
 
-require("luasnip").config.setup({
+local snippets = require("luasnip.config")
+
+local config = {
   ext_opts = {
     [types.choiceNode] = {
       active = {
-        virt_text = { { "●", "DiffAdd" } },
+        virt_text = {
+          { "●", "DiffAdd" },
+        },
       },
     },
     [types.insertNode] = {
       active = {
-        virt_text = { { "●", "DiffDelete" } },
+        virt_text = {
+          { "●", "DiffDelete" },
+        },
       },
     },
   },
-})
+}
+
+-- load snippets configurations
+snippets.setup(config)
 
 -- loading any vscode snippets from plugins
 require("luasnip.loaders.from_vscode").lazy_load()
