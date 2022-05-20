@@ -33,9 +33,9 @@ local config = {
   },
 
   -- setting up null-ls server
-  on_attach = function(client, bufnr)
-    U.format_on_save(client, bufnr)
-    U.mappings(bufnr)
+  on_attach = function(client, buffer)
+    U.format_on_save(client, buffer)
+    U.mappings(buffer)
   end,
 }
 
