@@ -76,6 +76,16 @@ config.rust_analyzer.setup({
   },
 })
 
+-- C / C++ / Objective-C / Objective-C++
+config.clangd.setup({
+  flags = flags,
+  capabilities = capabilities,
+  filetypes = { "c", "cpp", "objc", "objcpp" },
+  on_attach = function(_, buffer)
+    U.mappings(buffer)
+  end,
+})
+
 -- Golang
 config.gopls.setup({
   flags = flags,
