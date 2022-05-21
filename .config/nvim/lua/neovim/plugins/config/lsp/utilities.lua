@@ -71,7 +71,7 @@ function U.mappings(buffer)
   bufmap(buffer, "n", "<space>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
   bufmap(buffer, "n", "<space>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
   bufmap(buffer, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
-  bufmap(buffer, "n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
+  bufmap(buffer, "n", "<space>f", "<cmd>lua vim.lsp.buf.format()<CR>", opts)
 end
 
 return U
