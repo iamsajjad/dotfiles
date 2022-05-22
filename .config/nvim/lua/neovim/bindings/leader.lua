@@ -3,10 +3,10 @@
 
 local g = vim.g
 
-local U = require("neovim.core.utilities")
+local Mapper = require("neovim.core.mapper")
 
 -- map <leader> to comma
-U.map("n", ",", "<Nop>")
+Mapper.map("n", ",", "<Nop>")
 g.mapleader = ","
 g.maplocalleader = ","
 
