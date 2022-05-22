@@ -1,11 +1,11 @@
 
 -- ... insert.lua
 
-local U = require("neovim.core.utilities")
+local Mapper = require("neovim.core.mapper")
 
 -- undo chunk at a time
-U.map("i", ",", ",<c-g>u")
-U.map("i", ".", ".<c-g>u")
-U.map("i", "!", "!<c-g>u")
-U.map("i", "?", "?<c-g>u")
+Mapper.map("i", ",", ",<c-g>u")
+Mapper.map("i", ".", ".<c-g>u")
+Mapper.map("i", "!", "!<c-g>u")
+Mapper.map("i", "?", "?<c-g>u")
 
