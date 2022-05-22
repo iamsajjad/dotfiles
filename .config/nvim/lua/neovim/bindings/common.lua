@@ -1,29 +1,29 @@
 
 -- ... common.lua
 
-local U = require("neovim.core.utilities")
+local Mapper = require("neovim.core.mapper")
 
 -- disable arrow keys in command mode
-U.map("c", "<Down>", "<Nop>")
-U.map("c", "<Left>", "<Nop>")
-U.map("c", "<Right>", "<Nop>")
-U.map("c", "<Up>", "<Nop>")
+Mapper.map("c", "<Down>", "<Nop>")
+Mapper.map("c", "<Left>", "<Nop>")
+Mapper.map("c", "<Right>", "<Nop>")
+Mapper.map("c", "<Up>", "<Nop>")
 
 -- disable arrow keys in insert mode
-U.map("i", "<Down>", "<Nop>")
-U.map("i", "<Left>", "<Nop>")
-U.map("i", "<Right>", "<Nop>")
-U.map("i", "<Up>", "<Nop>")
+Mapper.map("i", "<Down>", "<Nop>")
+Mapper.map("i", "<Left>", "<Nop>")
+Mapper.map("i", "<Right>", "<Nop>")
+Mapper.map("i", "<Up>", "<Nop>")
 
 -- disable arrow keys in normal mode
-U.map("n", "<Down>", "<Nop>")
-U.map("n", "<Left>", "<Nop>")
-U.map("n", "<Right>", "<Nop>")
-U.map("n", "<Up>", "<Nop>")
+Mapper.map("n", "<Down>", "<Nop>")
+Mapper.map("n", "<Left>", "<Nop>")
+Mapper.map("n", "<Right>", "<Nop>")
+Mapper.map("n", "<Up>", "<Nop>")
 
 -- disable arrow keys in visual mode
-U.map("v", "<Down>", "<Nop>")
-U.map("v", "<Left>", "<Nop>")
-U.map("v", "<Right>", "<Nop>")
-U.map("v", "<Up>", "<Nop>")
+Mapper.map("v", "<Down>", "<Nop>")
+Mapper.map("v", "<Left>", "<Nop>")
+Mapper.map("v", "<Right>", "<Nop>")
+Mapper.map("v", "<Up>", "<Nop>")
 
