@@ -2,7 +2,7 @@
 -- snippets.lua
 
 local types = require("luasnip.util.types")
-local U = require("neovim.core.utilities")
+local Mapper = require("neovim.core.mapper")
 
 local snippets = require("luasnip.config")
 
@@ -32,8 +32,16 @@ snippets.setup(config)
 require("luasnip.loaders.from_vscode").lazy_load()
 
 -- key bindings to move around inside snippets
-U.map("i", "<C-j>", '<CMD>lua require("luasnip").jump(1)<CR>')
-U.map("i", "<C-k>", '<CMD>lua require("luasnip").jump(-1)<CR>')
-U.map("s", "<C-j>", '<CMD>lua require("luasnip").jump(1)<CR>')
-U.map("s", "<C-k>", '<CMD>lua require("luasnip").jump(-1)<CR>')
+Mapper.map("i", "<C-j>", function()
+  require("luasnip").jump(1)
+end)
+Mapper.map("i", "<C-k>", function()
+  require("luasnip").jump(-1)
+end)
+Mapper.map("s", "<C-j>", function()
+  require("luasnip").jump(1)
+end)
+Mapper.map("s", "<C-k>", function()
+  require("luasnip").jump(-1)
+end)
 
