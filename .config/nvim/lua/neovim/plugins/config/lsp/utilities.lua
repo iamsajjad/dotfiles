@@ -1,10 +1,7 @@
 
 -- ... utilities.lua
 
-local api = vim.api
-local map = api.nvim_set_keymap
-local bufmap = api.nvim_buf_set_keymap
-local opts = { noremap = true, silent = true }
+local Mapper = require("neovim.core.mapper")
 
 local U = {}
 
@@ -50,28 +47,34 @@ function U.get_nvim_rtp_path()
 end
 
 ---Diagnostic mappings
-map("n", "<space>e", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
-map("n", "[d", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
-map("n", "]d", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
-map("n", "<space>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
+local opts = { noremap = true, silent = true, expr = false }
+Mapper.map("n", "<space>e", vim.diagnostic.open_float, opts)
+Mapper.map("n", "[d", vim.diagnostic.goto_prev, opts)
+Mapper.map("n", "]d", vim.diagnostic.goto_next, opts)
+Mapper.map("n", "<space>q", vim.diagnostic.setloclist, opts)
 
 ---LSP mappings
 ---@param buffer number
 function U.mappings(buffer)
+  -- options with specific buffer number
+  opts = { noremap = true, silent = true, expr = false, buffer = buffer }
+
   -- See `:help vim.lsp.*` for documentation on any of the below functions
-  bufmap(buffer, "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
-  bufmap(buffer, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
-  bufmap(buffer, "n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
-  bufmap(buffer, "n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
-  bufmap(buffer, "n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
-  bufmap(buffer, "n", "<space>wa", "<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>", opts)
-  bufmap(buffer, "n", "<space>wr", "<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>", opts)
-  bufmap(buffer, "n", "<space>wl", "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>", opts)
-  bufmap(buffer, "n", "<space>D", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
-  bufmap(buffer, "n", "<space>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
-  bufmap(buffer, "n", "<space>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
-  bufmap(buffer, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
-  bufmap(buffer, "n", "<space>f", "<cmd>lua vim.lsp.buf.format()<CR>", opts)
+  Mapper.map("n", "gD", vim.lsp.buf.declaration, opts)
+  Mapper.map("n", "gd", vim.lsp.buf.definition, opts)
+  Mapper.map("n", "K", vim.lsp.buf.hover, opts)
+  Mapper.map("n", "gi", vim.lsp.buf.implementation, opts)
+  Mapper.map("n", "<C-k>", vim.lsp.buf.signature_help, opts)
+  Mapper.map("n", "<space>wa", vim.lsp.buf.add_workspace_folder, opts)
+  Mapper.map("n", "<space>wr", vim.lsp.buf.remove_workspace_folder, opts)
+  Mapper.map("n", "<space>wl", function()
+    print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
+  end, opts)
+  Mapper.map("n", "<space>D", vim.lsp.buf.type_definition, opts)
+  Mapper.map("n", "<space>rn", vim.lsp.buf.rename, opts)
+  Mapper.map("n", "<space>ca", vim.lsp.buf.code_action, opts)
+  Mapper.map("n", "gr", vim.lsp.buf.references, opts)
+  Mapper.map("n", "<space>f", vim.lsp.buf.format, opts)
 end
 
 return U
