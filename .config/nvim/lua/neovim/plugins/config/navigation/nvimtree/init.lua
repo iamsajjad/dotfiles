@@ -4,7 +4,7 @@
 local g = vim.g
 local api = vim.api
 
-local U = require("neovim.core.utilities")
+local Mapper = require("neovim.core.mapper")
 
 g.nvim_tree_show_icons = {
   git = 1,
@@ -159,7 +159,7 @@ require("nvim-tree").setup({
   },
 })
 
-U.map("n", "<C-n>", "<CMD>NvimTreeToggle<CR>")
+Mapper.map("n", "<C-n>", "<CMD>NvimTreeToggle<CR>")
 
 local nvimtree = api.nvim_create_augroup("NvimTree", { clear = true })
 
