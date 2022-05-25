@@ -2,6 +2,7 @@
 -- ... init.lua
 
 local U = require("neovim.core.utilities")
+local Mapper = require("neovim.core.mapper")
 
 local telescope = require("telescope")
 local finders = require("telescope.builtin")
@@ -50,7 +51,7 @@ local config = {
 -- load telescope configurations
 telescope.setup(config)
 
-function _G.__telescope_open(fn)
+local function telescope_open(fn)
   U.move_cursor_from_tree()
   finders[fn]({
     hidden = true,
@@ -58,23 +59,37 @@ function _G.__telescope_open(fn)
 end
 
 -- ctrl-p = fuzzy finder
-U.map("n", "<C-p>", "<CMD>lua __telescope_open('find_files')<CR>")
+Mapper.map("n", "<C-p>", function()
+  telescope_open("find_files")
+end)
 
 -- fuzzy find active buffers
-U.map("n", "'b", "<CMD>lua __telescope_open('buffers')<CR>")
+Mapper.map("n", "'b", function()
+  telescope_open("buffers")
+end)
 
 -- search for string
-U.map("n", "'r", "<CMD>lua __telescope_open('live_grep')<CR>")
+Mapper.map("n", "'r", function()
+  telescope_open("live_grep")
+end)
 
 -- fuzzy find history buffers
-U.map("n", "'i", "<CMD>lua __telescope_open('oldfiles')<CR>")
+Mapper.map("n", "'i", function()
+  telescope_open("oldfiles")
+end)
 
 -- fuzzy find changed files in git
-U.map("n", "'c", "<CMD>lua __telescope_open('git_status')<CR>")
+Mapper.map("n", "'c", function()
+  telescope_open("git_status")
+end)
 
 -- fuzzy find register
-U.map("n", "'g", "<CMD>lua __telescope_open('registers')<CR>")
+Mapper.map("n", "'g", function()
+  telescope_open("registers")
+end)
 
 -- fuzzy find help page tag
-U.map("n", "'h", "<CMD>lua __telescope_open('help_tags')<CR>")
+Mapper.map("n", "'h", function()
+  telescope_open("help_tags")
+end)
 
