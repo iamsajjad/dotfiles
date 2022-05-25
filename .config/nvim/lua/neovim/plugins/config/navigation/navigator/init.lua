@@ -1,7 +1,7 @@
 
 -- ... init.lua
 
-local U = require("neovim.core.utilities")
+local Mapper = require("neovim.core.mapper")
 
 local navigator = require("Navigator")
 
@@ -17,12 +17,12 @@ local config = {
   disable_on_zoom = false,
 }
 
--- bindings
-U.map("n", "<C-h>", '<CMD>lua require("Navigator").left()<CR>')
-U.map("n", "<C-k>", '<CMD>lua require("Navigator").up()<CR>')
-U.map("n", "<C-l>", '<CMD>lua require("Navigator").right()<CR>')
-U.map("n", "<C-j>", '<CMD>lua require("Navigator").down()<CR>')
-
 -- load navigator configurations
 navigator.setup(config)
+
+-- bindings
+Mapper.map("n", "<C-h>", navigator.left)
+Mapper.map("n", "<C-k>", navigator.up)
+Mapper.map("n", "<C-l>", navigator.right)
+Mapper.map("n", "<C-j>", navigator.down)
 
