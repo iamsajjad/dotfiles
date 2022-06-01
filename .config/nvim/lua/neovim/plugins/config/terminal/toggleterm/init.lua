@@ -1,7 +1,9 @@
 
 -- ... init.lua
 
-require("toggleterm").setup({
+local toggleterm = require("toggleterm")
+
+local config = {
 
   -- size can be a number or function which is passed the current terminal
   size = function(term)
@@ -56,5 +58,8 @@ require("toggleterm").setup({
       background = "Normal",
     },
   },
-})
+}
+
+-- load toggleterm configurations
+toggleterm.setup(config)
 
