@@ -3,8 +3,13 @@
 
 local Mapper = require("neovim.core.mapper")
 
--- setup hop
-require("hop").setup()
+local hop = require("hop")
+
+-- hop configurations
+local config = {}
+
+-- load hop configurations
+hop.setup(config)
 
 -- bindings
 -- hop word
