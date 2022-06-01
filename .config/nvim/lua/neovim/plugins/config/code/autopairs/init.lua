@@ -1,11 +1,16 @@
 
 -- ... init.lua
 
--- setup autopairs
-require("nvim-autopairs").setup()
+local autopairs = require("nvim-autopairs")
 
 -- autopairs completion setup
 local completion = require("nvim-autopairs.completion.cmp")
+
+-- autopairs configurations
+local config = {}
+
+-- load autopairs configurations
+autopairs.setup(config)
 
 -- nvim-cmp integrations
 require("cmp").event:on(
