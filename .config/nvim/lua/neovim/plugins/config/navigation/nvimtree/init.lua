@@ -3,6 +3,8 @@
 
 local g = vim.g
 
+local nvimtree = require("nvim-tree")
+
 local Mapper = require("neovim.core.mapper")
 
 -- load nvimtree commands
@@ -26,7 +28,7 @@ g.nvim_tree_icons = {
   },
 }
 
-require("nvim-tree").setup({
+local config = {
 
   -- disables netrw completely
   disable_netrw = true,
@@ -159,7 +161,10 @@ require("nvim-tree").setup({
     -- ignore files and directories
     custom = { ".git", "node_modules" },
   },
-})
+}
+
+-- load nvimtree configurations
+nvimtree.setup(config)
 
 Mapper.map("n", "<C-n>", "<CMD>NvimTreeToggle<CR>")
 
