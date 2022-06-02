@@ -2,9 +2,11 @@
 -- ... init.lua
 
 local g = vim.g
-local api = vim.api
 
 local Mapper = require("neovim.core.mapper")
+
+-- load nvimtree commands
+local commands = require("neovim.plugins.config.navigation.nvimtree.commands")
 
 g.nvim_tree_show_icons = {
   git = 1,
@@ -160,15 +162,4 @@ require("nvim-tree").setup({
 })
 
 Mapper.map("n", "<C-n>", "<CMD>NvimTreeToggle<CR>")
-
-local nvimtree = api.nvim_create_augroup("NvimTree", { clear = true })
-
--- open help vertically and press q to exit
-api.nvim_create_autocmd("FileType", {
-  group = nvimtree,
-  pattern = "NvimTree",
-  callback = function()
-    api.nvim_win_set_option(0, "wrap", false)
-  end,
-})
 
