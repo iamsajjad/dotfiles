@@ -1,7 +1,10 @@
 
 -- ... init.lua
 
-local comment = require("Comment")
+local ok, comment = pcall(require, "Comment")
+if not ok then
+  return
+end
 
 local config = {
 
