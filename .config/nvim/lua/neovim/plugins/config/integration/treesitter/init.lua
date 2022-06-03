@@ -4,7 +4,10 @@
 -- vim.wo.foldmethod = 'expr'
 -- vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
 
-local treesitter = require("nvim-treesitter.configs")
+local ok, treesitter = pcall(require, "nvim-treesitter.configs")
+if not ok then
+  return
+end
 
 -- path for other treesitter plugins
 local path = "neovim.plugins.config.integration.treesitter" .. "."
