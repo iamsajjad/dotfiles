@@ -1,7 +1,10 @@
 
 -- ... init.lua
 
-local bufferline = require("bufferline")
+local ok, bufferline = pcall(require, "bufferline")
+if not ok then
+  return
+end
 
 local config = {
   options = {
