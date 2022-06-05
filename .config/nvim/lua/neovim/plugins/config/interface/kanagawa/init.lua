@@ -2,7 +2,12 @@
 -- ... init.lua
 
 local cmd = vim.cmd
-local kanagawa = require("kanagawa")
+
+local ok, kanagawa = pcall(require, "kanagawa")
+if not ok then
+  return
+end
+
 local default = require("kanagawa.colors").setup()
 
 -- this will affect all the hl-groups where the redefined colors are used
