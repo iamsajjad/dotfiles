@@ -1,7 +1,10 @@
 
 -- ... init.lua
 
-local indentline = require("indent_blankline")
+local ok, indentline = pcall(require, "indent_blankline")
+if not ok then
+  return
+end
 
 local config = {
 
