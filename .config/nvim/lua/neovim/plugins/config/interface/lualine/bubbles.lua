@@ -2,7 +2,10 @@
 -- ... bubbles.lua
 
 -- bubbles config for lualine
-local lualine = require("lualine")
+local ok, lualine = pcall(require, "lualine")
+if not ok then
+  return
+end
 
 -- stylua: ignore
 local colors = {
