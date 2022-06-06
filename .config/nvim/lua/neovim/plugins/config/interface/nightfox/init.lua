@@ -2,7 +2,11 @@
 -- ... init.lua
 
 local cmd = vim.cmd
-local nightfox = require("nightfox")
+
+local ok, nightfox = pcall(require, "nightfox")
+if not ok then
+  return
+end
 
 -- set the nightfox options in options table. if a value is not passed in the options table
 -- it will be taken from the default configurations
