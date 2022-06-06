@@ -2,7 +2,10 @@
 -- ... evilline.lua
 
 -- evilline config for lualine
-local lualine = require("lualine")
+local ok, lualine = pcall(require, "lualine")
+if not ok then
+  return
+end
 
 -- color table for highlights
 -- stylua: ignore
