@@ -1,7 +1,10 @@
 
 -- ... completion.lua
 
-local completion = require("cmp")
+local ok, completion = pcall(require, "cmp")
+if not ok then
+  return
+end
 
 local config = {
   mapping = {
