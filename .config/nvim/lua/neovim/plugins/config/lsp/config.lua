@@ -1,7 +1,11 @@
 
 -- ... config.lua
 
-local config = require("lspconfig")
+local ok, config = pcall(require, "lspconfig")
+if not ok then
+  return
+end
+
 local U = require("neovim.plugins.config.lsp.utilities")
 
 local capabilities = U.capabilities()
