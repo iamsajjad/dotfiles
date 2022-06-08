@@ -1,7 +1,11 @@
 
 -- ... nullls.lua
 
-local nullls = require("null-ls")
+local ok, nullls = pcall(require, "null-ls")
+if not ok then
+  return
+end
+
 local U = require("neovim.plugins.config.lsp.utilities")
 
 local fmt = nullls.builtins.formatting
