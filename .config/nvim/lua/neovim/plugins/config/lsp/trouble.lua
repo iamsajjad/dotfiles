@@ -1,7 +1,10 @@
 
 -- ... trouble.lua
 
-local trouble = require("trouble")
+local ok, trouble = pcall(require, "trouble")
+if not ok then
+  return
+end
 
 local config = {
 
