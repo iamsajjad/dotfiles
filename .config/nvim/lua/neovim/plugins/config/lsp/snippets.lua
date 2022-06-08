@@ -1,10 +1,13 @@
 
 -- snippets.lua
 
+local ok, snippets = pcall(require, "luasnip.config")
+if not ok then
+  return
+end
+
 local types = require("luasnip.util.types")
 local Mapper = require("neovim.core.mapper")
-
-local snippets = require("luasnip.config")
 
 local config = {
   ext_opts = {
