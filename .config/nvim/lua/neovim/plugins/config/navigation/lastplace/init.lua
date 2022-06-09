@@ -1,7 +1,10 @@
 
 -- ... init.lua
 
-local lastplace = require("nvim-lastplace")
+local ok, lastplace = pcall(require, "nvim-lastplace")
+if not ok then
+  return
+end
 
 local config = {
 
