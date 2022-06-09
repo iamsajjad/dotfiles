@@ -1,9 +1,12 @@
 
 -- ... init.lua
 
-local Mapper = require("neovim.core.mapper")
+local ok, navigator = pcall(require, "Navigator")
+if not ok then
+  return
+end
 
-local navigator = require("Navigator")
+local Mapper = require("neovim.core.mapper")
 
 local config = {
 
