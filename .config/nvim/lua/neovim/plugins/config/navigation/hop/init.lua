@@ -1,9 +1,12 @@
 
 -- ... init.lua
 
-local Mapper = require("neovim.core.mapper")
+local ok, hop = pcall(require, "hop")
+if not ok then
+  return
+end
 
-local hop = require("hop")
+local Mapper = require("neovim.core.mapper")
 
 -- hop configurations
 local config = {}
