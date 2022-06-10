@@ -4,7 +4,11 @@
 local U = require("neovim.core.utilities")
 local Mapper = require("neovim.core.mapper")
 
-local telescope = require("telescope")
+local ok, telescope = pcall(require, "telescope")
+if not ok then
+  return
+end
+
 local finders = require("telescope.builtin")
 local actions = require("telescope.actions")
 
