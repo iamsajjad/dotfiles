@@ -3,7 +3,10 @@
 
 local g = vim.g
 
-local nvimtree = require("nvim-tree")
+local ok, nvimtree = pcall(require, "nvim-tree")
+if not ok then
+  return
+end
 
 local Mapper = require("neovim.core.mapper")
 
