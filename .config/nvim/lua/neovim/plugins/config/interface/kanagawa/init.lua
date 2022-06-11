@@ -39,7 +39,7 @@ local overrides = {
 local options = {
   -- enable undercurls
   undercurl = true,
-  commentStyle = "italic",
+  commentStyle = { italic = true },
   functionStyle = "NONE",
   keywordStyle = "italic",
   statementStyle = "bold",
