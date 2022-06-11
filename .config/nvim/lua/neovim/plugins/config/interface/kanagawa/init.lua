@@ -40,7 +40,7 @@ local options = {
   -- enable undercurls
   undercurl = true,
   commentStyle = { italic = true },
-  functionStyle = "NONE",
+  functionStyle = {},
   keywordStyle = "italic",
   statementStyle = "bold",
   typeStyle = "NONE",
