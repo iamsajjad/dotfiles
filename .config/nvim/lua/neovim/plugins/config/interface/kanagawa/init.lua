@@ -42,7 +42,7 @@ local options = {
   commentStyle = { italic = true },
   functionStyle = {},
   keywordStyle = { italic = true },
-  statementStyle = "bold",
+  statementStyle = { bold = true },
   typeStyle = "NONE",
   variablebuiltinStyle = "italic",
   -- special highlight for the return keyword
