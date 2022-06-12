@@ -41,7 +41,7 @@ local options = {
   undercurl = true,
   commentStyle = { italic = true },
   functionStyle = {},
-  keywordStyle = "italic",
+  keywordStyle = { italic = true },
   statementStyle = "bold",
   typeStyle = "NONE",
   variablebuiltinStyle = "italic",
