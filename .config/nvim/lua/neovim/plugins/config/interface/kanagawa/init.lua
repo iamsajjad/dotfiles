@@ -43,7 +43,7 @@ local options = {
   functionStyle = {},
   keywordStyle = { italic = true },
   statementStyle = { bold = true },
-  typeStyle = "NONE",
+  typeStyle = {},
   variablebuiltinStyle = "italic",
   -- special highlight for the return keyword
   specialReturn = true,
