@@ -50,7 +50,7 @@ config.sumneko_lua.setup({
       },
       workspace = {
         -- make the server aware of neovim runtime files
-        library = U.get_nvim_rtp_path(),
+        library = { os.getenv("VIMRUNTIME") },
       },
       -- do not send telemetry data containing a randomized but unique identifier
       telemetry = {

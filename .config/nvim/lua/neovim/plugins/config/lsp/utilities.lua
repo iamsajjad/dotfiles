@@ -41,11 +41,6 @@ function U.get_luajit_path()
   return luajit_path
 end
 
----make neovim runtime files discoverable to the server
-function U.get_nvim_rtp_path()
-  return { os.getenv("VIMRUNTIME") }
-end
-
 ---Diagnostic mappings
 local opts = { noremap = true, silent = true, expr = false }
 Mapper.map("n", "<space>e", vim.diagnostic.open_float, opts)
