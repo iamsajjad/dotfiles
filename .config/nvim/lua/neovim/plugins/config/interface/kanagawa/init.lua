@@ -44,7 +44,7 @@ local options = {
   keywordStyle = { italic = true },
   statementStyle = { bold = true },
   typeStyle = {},
-  variablebuiltinStyle = "italic",
+  variablebuiltinStyle = { italic = true },
   -- special highlight for the return keyword
   specialReturn = true,
   -- special highlight for exception handling keywords
