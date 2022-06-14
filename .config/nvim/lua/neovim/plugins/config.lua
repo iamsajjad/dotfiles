@@ -223,14 +223,6 @@ return require("packer").startup({
     })
 
     use({
-      "ntpeters/vim-better-whitespace",
-      event = "BufRead",
-      config = function()
-        require("neovim.plugins.config.code.whitespace")
-      end,
-    })
-
-    use({
       "AndrewRadev/splitjoin.vim",
       -- NOTE: splitjoin won't work with `BufRead` event
       event = "CursorHold",
