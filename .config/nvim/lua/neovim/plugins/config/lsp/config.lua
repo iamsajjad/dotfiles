@@ -43,7 +43,6 @@ config.sumneko_lua.setup({
       runtime = {
         -- tell the language server which version of lua you're using (most likely luajit in the case of neovim)
         version = "LuaJIT",
-        path = U.get_luajit_path(),
       },
       diagnostics = {
         globals = { "vim" },

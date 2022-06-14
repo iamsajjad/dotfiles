@@ -33,14 +33,6 @@ function U.capabilities()
   return require("cmp_nvim_lsp").update_capabilities(capabilities)
 end
 
----make luajit runtime files discoverable to the server
-function U.get_luajit_path()
-  local luajit_path = vim.split(package.path, ";")
-  table.insert(luajit_path, "lua/?.lua")
-  table.insert(luajit_path, "lua/?/init.lua")
-  return luajit_path
-end
-
 ---Diagnostic mappings
 local opts = { noremap = true, silent = true, expr = false }
 Mapper.map("n", "<space>e", vim.diagnostic.open_float, opts)
