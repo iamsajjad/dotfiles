@@ -6,11 +6,6 @@ local Mapper = require("neovim.core.mapper")
 -- fix * (keep the cursor position, don't move to next match)
 Mapper.map("n", "*", "*N")
 
--- visual * and # search
--- until https://github.com/neovim/neovim/pull/15472 is merged
-Mapper.map("x", "*", 'y/\\V<C-R>"<CR>')
-Mapper.map("x", "#", 'y?\\V<C-R>"<CR>')
-
 -- keep cursor in center
 Mapper.map("n", "n", "nzzzv", { noremap = true })
 Mapper.map("n", "N", "Nzzzv", { noremap = true })
