@@ -125,6 +125,9 @@ opt.formatoptions = opt.formatoptions
   + "j" -- enable remove a comment leader when joining lines
   - "2" -- disable using the indent of the second line of a paragraph for the rest
 
+-- characters list
+opt.list = true
+
 -- set fillchars=eob:~
 opt.fillchars = { eob = "~" }
 
