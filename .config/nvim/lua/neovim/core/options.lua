@@ -127,7 +127,9 @@ opt.formatoptions = opt.formatoptions
 
 -- characters list
 opt.list = true
-opt.listchars = {}
+opt.listchars = {
+  -- conceal = "",
+}
 
 -- set fillchars=eob:~
 opt.fillchars = { eob = "~" }
