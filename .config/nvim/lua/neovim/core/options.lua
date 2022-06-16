@@ -129,6 +129,7 @@ opt.formatoptions = opt.formatoptions
 opt.list = true
 opt.listchars = {
   -- conceal = "",
+  -- eol = "",
 }
 
 -- set fillchars=eob:~
