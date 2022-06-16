@@ -130,6 +130,7 @@ opt.list = true
 opt.listchars = {
   -- conceal = "",
   -- eol = "",
+  -- extends = "",
 }
 
 -- set fillchars=eob:~
