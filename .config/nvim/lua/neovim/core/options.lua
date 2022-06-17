@@ -132,6 +132,7 @@ opt.listchars = {
   -- eol = "",
   -- extends = "",
   -- lead = "",
+  -- leadmultispace = "",
 }
 
 -- set fillchars=eob:~
