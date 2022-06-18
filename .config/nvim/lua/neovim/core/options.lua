@@ -136,6 +136,7 @@ opt.listchars = {
   -- multispace = "",
   -- nbsp = "",
   -- precedes = "",
+  -- space = "",
 }
 
 -- set fillchars=eob:~
