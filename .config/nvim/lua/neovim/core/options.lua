@@ -138,6 +138,7 @@ opt.listchars = {
   -- precedes = "",
   -- space = "",
   -- tab = "",
+  -- trail = "",
 }
 
 -- set fillchars=eob:~
