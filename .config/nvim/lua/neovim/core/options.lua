@@ -137,7 +137,7 @@ opt.listchars = {
   nbsp = "⊙",
   -- precedes = "",
   -- space = "",
-  -- tab = "",
+  tab = "❭·",
   -- trail = "",
 }
 
