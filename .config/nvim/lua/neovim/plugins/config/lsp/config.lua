@@ -150,3 +150,12 @@ config.jsonls.setup({
   end,
 })
 
+-- Html
+config.html.setup({
+  flags = flags,
+  capabilities = capabilities,
+  on_attach = function(_, buffer)
+    U.mappings(buffer)
+  end,
+})
+
