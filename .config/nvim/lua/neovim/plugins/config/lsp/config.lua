@@ -159,3 +159,12 @@ config.html.setup({
   end,
 })
 
+-- Css
+config.cssls.setup({
+  flags = flags,
+  capabilities = capabilities,
+  on_attach = function(_, buffer)
+    U.mappings(buffer)
+  end,
+})
+
