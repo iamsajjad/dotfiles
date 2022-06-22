@@ -6,6 +6,7 @@ if not ok then
   return
 end
 
+local bindings = require("neovim.plugins.config.lsp.bindings")
 local U = require("neovim.plugins.config.lsp.utilities")
 
 local capabilities = U.capabilities()
@@ -32,7 +33,7 @@ config.sumneko_lua.setup({
   flags = flags,
   capabilities = capabilities,
   on_attach = function(_, buffer)
-    U.mappings(buffer)
+    bindings.init(buffer)
   end,
   settings = {
     Lua = {
@@ -64,7 +65,7 @@ config.rust_analyzer.setup({
   flags = flags,
   capabilities = capabilities,
   on_attach = function(_, buffer)
-    U.mappings(buffer)
+    bindings.init(buffer)
   end,
   settings = {
     ["rust-analyzer"] = {
@@ -85,7 +86,7 @@ config.clangd.setup({
   capabilities = capabilities,
   filetypes = { "c", "cpp", "objc", "objcpp" },
   on_attach = function(_, buffer)
-    U.mappings(buffer)
+    bindings.init(buffer)
   end,
 })
 
@@ -94,7 +95,7 @@ config.gopls.setup({
   flags = flags,
   capabilities = capabilities,
   on_attach = function(_, buffer)
-    U.mappings(buffer)
+    bindings.init(buffer)
   end,
 })
 
@@ -103,7 +104,7 @@ config.zls.setup({
   flags = flags,
   capabilities = capabilities,
   on_attach = function(_, buffer)
-    U.mappings(buffer)
+    bindings.init(buffer)
   end,
 })
 
@@ -119,7 +120,7 @@ config.tsserver.setup({
   flags = flags,
   capabilities = capabilities,
   on_attach = function(_, buffer)
-    U.mappings(buffer)
+    bindings.init(buffer)
   end,
 })
 
@@ -128,7 +129,7 @@ config.pyright.setup({
   flags = flags,
   capabilities = capabilities,
   on_attach = function(_, buffer)
-    U.mappings(buffer)
+    bindings.init(buffer)
   end,
 })
 
@@ -137,7 +138,7 @@ config.yamlls.setup({
   flags = flags,
   capabilities = capabilities,
   on_attach = function(_, buffer)
-    U.mappings(buffer)
+    bindings.init(buffer)
   end,
 })
 
@@ -146,7 +147,7 @@ config.jsonls.setup({
   flags = flags,
   capabilities = capabilities,
   on_attach = function(_, buffer)
-    U.mappings(buffer)
+    bindings.init(buffer)
   end,
 })
 
@@ -155,7 +156,7 @@ config.html.setup({
   flags = flags,
   capabilities = capabilities,
   on_attach = function(_, buffer)
-    U.mappings(buffer)
+    bindings.init(buffer)
   end,
 })
 
@@ -164,7 +165,7 @@ config.cssls.setup({
   flags = flags,
   capabilities = capabilities,
   on_attach = function(_, buffer)
-    U.mappings(buffer)
+    bindings.init(buffer)
   end,
 })
 
