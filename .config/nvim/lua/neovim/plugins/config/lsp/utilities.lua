@@ -33,18 +33,11 @@ function U.capabilities()
   return require("cmp_nvim_lsp").update_capabilities(capabilities)
 end
 
----Diagnostic mappings
-local opts = { noremap = true, silent = true, expr = false }
-Mapper.map("n", "<space>e", vim.diagnostic.open_float, opts)
-Mapper.map("n", "[d", vim.diagnostic.goto_prev, opts)
-Mapper.map("n", "]d", vim.diagnostic.goto_next, opts)
-Mapper.map("n", "<space>q", vim.diagnostic.setloclist, opts)
-
 ---LSP mappings
 ---@param buffer number
 function U.mappings(buffer)
   -- options with specific buffer number
-  opts = { noremap = true, silent = true, expr = false, buffer = buffer }
+  local opts = { noremap = true, silent = true, expr = false, buffer = buffer }
 
   -- See `:help vim.lsp.*` for documentation on any of the below functions
   Mapper.map("n", "gD", vim.lsp.buf.declaration, opts)
