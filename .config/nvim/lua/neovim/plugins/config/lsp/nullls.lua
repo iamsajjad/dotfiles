@@ -6,6 +6,7 @@ if not ok then
   return
 end
 
+local bindings = require("neovim.plugins.config.lsp.bindings")
 local U = require("neovim.plugins.config.lsp.utilities")
 
 local fmt = nullls.builtins.formatting
@@ -39,7 +40,7 @@ local config = {
   -- setting up null-ls server
   on_attach = function(client, buffer)
     U.format_on_save(client, buffer)
-    U.mappings(buffer)
+    bindings.init(buffer)
   end,
 }
 
