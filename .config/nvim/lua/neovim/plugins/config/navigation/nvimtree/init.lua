@@ -1,8 +1,6 @@
 
 -- ... init.lua
 
-local g = vim.g
-
 local ok, nvimtree = pcall(require, "nvim-tree")
 if not ok then
   return
@@ -12,19 +10,6 @@ local Mapper = require("neovim.core.mapper")
 
 -- load nvimtree commands
 local commands = require("neovim.plugins.config.navigation.nvimtree.commands")
-
-g.nvim_tree_icons = {
-  default = "",
-  symlink = "",
-  git = {
-    unstaged = "~",
-    staged = "+",
-    unmerged = "!",
-    renamed = "≈",
-    untracked = "?",
-    deleted = "-",
-  },
-}
 
 local config = {
 
@@ -166,6 +151,26 @@ local config = {
         -- show a git status icon, see |renderer.icons.git_placement| requires
         -- |git.enable| `= true`
         git = true,
+      },
+
+      -- configuration options for icon glyphs.
+      glyphs = {
+
+        -- glyph for files. will be overridden by `nvim-web-devicons` if available.
+        default = "",
+
+        -- glyph for symlinks to files.
+        symlink = "",
+
+        -- glyphs for git status.
+        git = {
+          unstaged = "~",
+          staged = "+",
+          unmerged = "!",
+          renamed = "≈",
+          untracked = "?",
+          deleted = "-",
+        },
       },
     },
   },
