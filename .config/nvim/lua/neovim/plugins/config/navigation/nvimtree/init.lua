@@ -13,6 +13,9 @@ local commands = require("neovim.plugins.config.navigation.nvimtree.commands")
 
 local config = {
 
+  -- reloads the explorer every time a buffer is written to.
+  auto_reload_on_write = true,
+
   -- disables netrw completely
   disable_netrw = true,
 
