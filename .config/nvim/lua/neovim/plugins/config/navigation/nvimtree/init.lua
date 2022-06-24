@@ -13,11 +13,6 @@ local Mapper = require("neovim.core.mapper")
 -- load nvimtree commands
 local commands = require("neovim.plugins.config.navigation.nvimtree.commands")
 
-g.nvim_tree_show_icons = {
-  git = 1,
-  folders = 1,
-  files = 1,
-}
 g.nvim_tree_icons = {
   default = "",
   symlink = "",
@@ -152,6 +147,25 @@ local config = {
         corner = "└ ",
         edge = "│ ",
         none = "  ",
+      },
+    },
+
+    -- configuration options for icons.
+    icons = {
+
+      -- configuration options for showing icon types.
+      show = {
+
+        -- show an icon before the file name. `nvim-web-devicons` will be used if
+        -- available.
+        file = true,
+
+        -- show an icon before the folder name.
+        folder = true,
+
+        -- show a git status icon, see |renderer.icons.git_placement| requires
+        -- |git.enable| `= true`
+        git = true,
       },
     },
   },
