@@ -16,6 +16,10 @@ local config = {
   -- reloads the explorer every time a buffer is written to.
   auto_reload_on_write = true,
 
+  -- creating a file when the cursor is on a closed directory will set the path to be
+  -- inside the closed directory, otherwise the parent directory.
+  create_in_closed_folder = false,
+
   -- disables netrw completely
   disable_netrw = true,
 
