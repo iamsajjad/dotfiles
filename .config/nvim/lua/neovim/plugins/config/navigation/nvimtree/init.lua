@@ -26,6 +26,9 @@ local config = {
   -- hijack netrw window on startup
   hijack_netrw = true,
 
+  -- opens in place of the unnamed buffer if the buffer is empty.
+  hijack_unnamed_buffer_when_opening = false,
+
   -- open the tree when running this setup function
   open_on_setup = false,
 
