@@ -46,6 +46,9 @@ local config = {
   -- opens the tree when changing/opening a new tab if the tree wasn't previously opened
   open_on_tab = false,
 
+  -- list of filetypes or buffer names that will prevent `open_on_tab` to open.
+  ignore_buf_on_tab_change = {},
+
   -- hijacks new directory buffers when they are opened.
   update_to_buf_dir = {
 
