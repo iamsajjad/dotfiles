@@ -29,6 +29,9 @@ local config = {
   -- opens in place of the unnamed buffer if the buffer is empty.
   hijack_unnamed_buffer_when_opening = false,
 
+  -- will ignore the buffer, when deciding to open the tree on setup.
+  ignore_buffer_on_setup = false,
+
   -- open the tree when running this setup function
   open_on_setup = false,
 
