@@ -35,6 +35,11 @@ local config = {
   -- open the tree when running this setup function
   open_on_setup = false,
 
+  -- will automatically open the tree when running setup if startup buffer
+  -- is a file, file window will be focused and file will be found if
+  -- `update_focused_file` is enabled.
+  open_on_setup_file = false,
+
   -- will not open on setup if the filetype is in this list
   ignore_ft_on_setup = {},
 
