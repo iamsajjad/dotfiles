@@ -49,6 +49,10 @@ local config = {
   -- list of filetypes or buffer names that will prevent `open_on_tab` to open.
   ignore_buf_on_tab_change = {},
 
+  -- changes how files within the same directory are sorted and the value can
+  -- be one of `name`, `case_sensitive`, `modification_time` or `extension`.
+  sort_by = "name",
+
   -- hijacks new directory buffers when they are opened.
   update_to_buf_dir = {
 
