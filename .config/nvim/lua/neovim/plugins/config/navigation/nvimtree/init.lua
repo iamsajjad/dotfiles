@@ -53,6 +53,10 @@ local config = {
   -- be one of `name`, `case_sensitive`, `modification_time` or `extension`.
   sort_by = "name",
 
+  -- set preferred root directories, only relevant when
+  -- `update_focused_file.update_root` is `true`.
+  root_dirs = {},
+
   -- hijacks new directory buffers when they are opened.
   update_to_buf_dir = {
 
