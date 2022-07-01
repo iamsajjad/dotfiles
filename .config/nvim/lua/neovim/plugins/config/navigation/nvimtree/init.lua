@@ -74,8 +74,8 @@ local config = {
   -- hijack the cursor in the tree to put it at the start of the filename
   hijack_cursor = false,
 
-  -- updates the root directory of the tree on `DirChanged` (when your run `:cd` usually)
-  update_cwd = false,
+  -- changes the tree root directory on `DirChanged` and refreshes the tree.
+  sync_root_with_cwd = false,
 
   -- show lsp diagnostics in the signcolumn
   diagnostics = {
