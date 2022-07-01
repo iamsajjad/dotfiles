@@ -77,6 +77,9 @@ local config = {
   -- changes the tree root directory on `DirChanged` and refreshes the tree.
   sync_root_with_cwd = false,
 
+  -- automatically reloads the tree on `bufenter` `nvimtree`.
+  reload_on_bufenter = false,
+
   -- show lsp diagnostics in the signcolumn
   diagnostics = {
     enable = true,
