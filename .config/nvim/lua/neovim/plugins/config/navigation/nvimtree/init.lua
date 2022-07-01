@@ -80,6 +80,9 @@ local config = {
   -- automatically reloads the tree on `bufenter` `nvimtree`.
   reload_on_bufenter = false,
 
+  -- will change `cwd` of `nvimtree` to that of new buffer's when opening `nvimtree`.
+  respect_buf_cwd = false,
+
   -- show lsp diagnostics in the signcolumn
   diagnostics = {
     enable = true,
