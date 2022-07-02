@@ -83,6 +83,11 @@ local config = {
   -- will change `cwd` of `nvimtree` to that of new buffer's when opening `nvimtree`.
   respect_buf_cwd = false,
 
+  -- function ran when creating the `nvim-tree` buffer this can be used to
+  -- attach keybindings to the tree buffer when on_attach is `"disabled"`, it
+  -- will use the older mapping strategy otherwise it will use the newer one.
+  on_attach = "disable",
+
   -- show lsp diagnostics in the signcolumn
   diagnostics = {
     enable = true,
