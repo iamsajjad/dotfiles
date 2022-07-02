@@ -137,6 +137,10 @@ local config = {
 
   view = {
 
+    -- resize the window on each draw based on the longest line,
+    -- only works when `|nvim-tree.view.side|` is `left` or `right`.
+    adaptive_size = false,
+
     -- width of the window, can be either a number (columns) or a string in `%`, for left or right side placement
     width = 35,
 
