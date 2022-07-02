@@ -88,6 +88,11 @@ local config = {
   -- will use the older mapping strategy otherwise it will use the newer one.
   on_attach = "disable",
 
+  -- to remove the default mappings in the tree remove specific keys via passing
+  -- a `string` table of keys like the following example `{ "<C-o>", "<CR>", "o", "<Tab>" }`
+  -- or remove all default mappings via passing `true` or ignore via passing `false`
+  remove_keymaps = false,
+
   -- show lsp diagnostics in the signcolumn
   diagnostics = {
     enable = true,
