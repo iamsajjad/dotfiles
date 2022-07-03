@@ -157,6 +157,10 @@ local config = {
     -- side of the tree, can be one of 'left' | 'right' | 'top' | 'bottom'
     side = "left",
 
+    -- preserves window proportions when opening a file, if `false`, the
+    -- height and width of windows other than `nvimtree` will be equalized.
+    preserve_window_proportions = false,
+
     -- if true the tree will resize itself after opening a file
     auto_resize = false,
 
