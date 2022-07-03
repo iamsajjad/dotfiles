@@ -141,6 +141,10 @@ local config = {
     -- only works when `|nvim-tree.view.side|` is `left` or `right`.
     adaptive_size = false,
 
+    -- when entering `nvimtree`, reposition the view so that the current node
+    -- is initially centralized, see `zz`.
+    centralize_selection = false,
+
     -- width of the window, can be either a number (columns) or a string in `%`, for left or right side placement
     width = 35,
 
