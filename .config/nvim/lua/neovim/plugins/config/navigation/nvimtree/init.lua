@@ -151,6 +151,9 @@ local config = {
     -- height of the window, can be either a number (columns) or a string in `%`, for top or bottom side placement
     height = 30,
 
+    -- hide the path of the current working directory on top of the tree.
+    hide_root_folder = false,
+
     -- side of the tree, can be one of 'left' | 'right' | 'top' | 'bottom'
     side = "left",
 
