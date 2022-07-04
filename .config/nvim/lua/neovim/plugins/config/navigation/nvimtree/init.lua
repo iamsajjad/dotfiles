@@ -161,6 +161,9 @@ local config = {
     -- height and width of windows other than `nvimtree` will be equalized.
     preserve_window_proportions = false,
 
+    -- print the line number in front of each line.
+    number = false,
+
     -- if true the tree will resize itself after opening a file
     auto_resize = false,
 
