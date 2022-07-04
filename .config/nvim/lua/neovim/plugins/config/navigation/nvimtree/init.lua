@@ -169,6 +169,9 @@ local config = {
     -- cursor line will be the line number instead of `0`.
     relativenumber = false,
 
+    -- show diagnostic sign column. value can be `"yes"`, `"auto"`, `"no"`.
+    signcolumn = "yes",
+
     -- if true the tree will resize itself after opening a file
     auto_resize = false,
 
