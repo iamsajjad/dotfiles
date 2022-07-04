@@ -164,6 +164,11 @@ local config = {
     -- print the line number in front of each line.
     number = false,
 
+    -- show the line number relative to the line with the cursor in front of
+    -- each line, if the option `view.number` is also `true`, the number on the
+    -- cursor line will be the line number instead of `0`.
+    relativenumber = false,
+
     -- if true the tree will resize itself after opening a file
     auto_resize = false,
 
