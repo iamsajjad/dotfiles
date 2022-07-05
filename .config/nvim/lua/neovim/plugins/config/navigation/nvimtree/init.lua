@@ -186,7 +186,12 @@ local config = {
     },
 
     -- configuration options for floating window.
-    float = {},
+    float = {
+
+      -- display `nvim-tree` window as float enforces
+      -- `nvim-tree.actions.open_file.quit_on_open` if the option is set.
+      enable = false,
+    },
   },
 
   actions = {
