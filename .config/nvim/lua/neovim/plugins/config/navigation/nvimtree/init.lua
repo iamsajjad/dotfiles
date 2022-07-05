@@ -184,6 +184,9 @@ local config = {
       -- list of mappings to set on the tree manually
       list = {},
     },
+
+    -- configuration options for floating window.
+    float = {},
   },
 
   actions = {
