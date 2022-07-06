@@ -193,7 +193,10 @@ local config = {
       enable = false,
 
       -- floating window config, see help page for `nvim_open_win` for more details.
-      open_win_config = {},
+      open_win_config = {
+
+        relative = "editor",
+      },
     },
   },
 
