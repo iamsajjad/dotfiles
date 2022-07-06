@@ -196,6 +196,7 @@ local config = {
       open_win_config = {
 
         relative = "editor",
+        border = "rounded",
       },
     },
   },
