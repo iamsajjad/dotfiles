@@ -198,6 +198,7 @@ local config = {
         relative = "editor",
         border = "rounded",
         width = 30,
+        height = 30,
       },
     },
   },
