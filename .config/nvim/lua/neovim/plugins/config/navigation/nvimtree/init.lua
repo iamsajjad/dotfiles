@@ -200,6 +200,7 @@ local config = {
         width = 30,
         height = 30,
         row = 1,
+        col = 1,
       },
     },
   },
