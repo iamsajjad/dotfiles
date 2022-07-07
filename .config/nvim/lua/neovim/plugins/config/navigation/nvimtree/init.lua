@@ -199,6 +199,7 @@ local config = {
         border = "rounded",
         width = 30,
         height = 30,
+        row = 1,
       },
     },
   },
