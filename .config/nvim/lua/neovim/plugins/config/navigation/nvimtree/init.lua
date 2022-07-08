@@ -217,6 +217,9 @@ local config = {
   },
 
   renderer = {
+
+    -- appends a trailing slash to folder names.
+    add_trailing = false,
     indent_markers = {
       enable = true,
       icons = {
