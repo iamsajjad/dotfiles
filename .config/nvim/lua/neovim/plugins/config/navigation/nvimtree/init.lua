@@ -224,6 +224,10 @@ local config = {
     -- compact folders that only contain a single folder into one node
     -- in the file tree.
     group_empty = false,
+
+    -- enable file highlight for git attributes using `nvimtreegit*` highlight groups.
+    -- this can be used with or without the icons.
+    highlight_git = false,
     indent_markers = {
       enable = true,
       icons = {
