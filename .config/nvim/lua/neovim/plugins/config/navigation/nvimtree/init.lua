@@ -220,6 +220,10 @@ local config = {
 
     -- appends a trailing slash to folder names.
     add_trailing = false,
+
+    -- compact folders that only contain a single folder into one node
+    -- in the file tree.
+    group_empty = false,
     indent_markers = {
       enable = true,
       icons = {
