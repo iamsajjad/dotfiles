@@ -232,6 +232,10 @@ local config = {
     -- display node whose name length is wider than the width of `nvimtree` window in
     -- floating window.
     full_name = false,
+
+    -- highlight icons and/or names for opened files, value can be `"none"`, `"icon"`,
+    -- `"name"` or `"all"`.
+    highlight_opened_files = "none",
     indent_markers = {
       enable = true,
       icons = {
