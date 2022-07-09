@@ -236,6 +236,10 @@ local config = {
     -- highlight icons and/or names for opened files, value can be `"none"`, `"icon"`,
     -- `"name"` or `"all"`.
     highlight_opened_files = "none",
+
+    -- in what format to show root folder, see `:help filename-modifiers` for
+    -- available options.
+    root_folder_modifier = ":~",
     indent_markers = {
       enable = true,
       icons = {
