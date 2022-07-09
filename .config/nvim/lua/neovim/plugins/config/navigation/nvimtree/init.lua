@@ -228,6 +228,10 @@ local config = {
     -- enable file highlight for git attributes using `nvimtreegit*` highlight groups.
     -- this can be used with or without the icons.
     highlight_git = false,
+
+    -- display node whose name length is wider than the width of `nvimtree` window in
+    -- floating window.
+    full_name = false,
     indent_markers = {
       enable = true,
       icons = {
