@@ -245,6 +245,10 @@ local config = {
     indent_width = 2,
     indent_markers = {
       enable = true,
+
+      -- display folder arrows in the same column as indent marker when
+      -- using `renderer.icons.show.folder_arrow`.
+      inline_arrows = true,
       icons = {
         corner = "└ ",
         edge = "│ ",
