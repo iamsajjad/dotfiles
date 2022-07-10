@@ -240,6 +240,9 @@ local config = {
     -- in what format to show root folder, see `:help filename-modifiers` for
     -- available options.
     root_folder_modifier = ":~",
+
+    -- hold the number of spaces for an each tree nesting level, minimum `1`.
+    indent_width = 2,
     indent_markers = {
       enable = true,
       icons = {
