@@ -250,7 +250,7 @@ local config = {
       -- using `renderer.icons.show.folder_arrow`.
       inline_arrows = true,
       icons = {
-        corner = "└ ",
+        corner = "└",
         edge = "│ ",
         none = "  ",
       },
