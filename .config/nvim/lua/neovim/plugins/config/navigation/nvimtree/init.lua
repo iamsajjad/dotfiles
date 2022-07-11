@@ -251,7 +251,7 @@ local config = {
       inline_arrows = true,
       icons = {
         corner = "└",
-        edge = "│ ",
+        edge = "│",
         none = "  ",
       },
     },
