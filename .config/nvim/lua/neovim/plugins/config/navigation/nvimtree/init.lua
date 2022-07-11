@@ -253,6 +253,7 @@ local config = {
         corner = "└",
         edge = "│",
         item = "│",
+        bottom = "─",
         none = "  ",
       },
     },
