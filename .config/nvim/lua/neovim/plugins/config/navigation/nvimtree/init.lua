@@ -252,6 +252,7 @@ local config = {
       icons = {
         corner = "└",
         edge = "│",
+        item = "│",
         none = "  ",
       },
     },
