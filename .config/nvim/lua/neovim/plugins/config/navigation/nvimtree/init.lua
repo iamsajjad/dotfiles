@@ -264,6 +264,12 @@ local config = {
       -- use the webdev icon colors, otherwise `NvimTreeFileIcon`.
       webdev_colors = true,
 
+      -- place where the git icons will be rendered, can be `"after"` or `"before"`
+      -- filename (after the `file` and `directory` icons) or `"signcolumn"` requires
+      -- `view.signcolumn` enabled note that the diagnostic signs will take precedence
+      -- over the git signs.
+      git_placement = "before",
+
       -- configuration options for showing icon types.
       show = {
 
