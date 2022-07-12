@@ -261,6 +261,9 @@ local config = {
     -- configuration options for icons.
     icons = {
 
+      -- use the webdev icon colors, otherwise `NvimTreeFileIcon`.
+      webdev_colors = true,
+
       -- configuration options for showing icon types.
       show = {
 
