@@ -254,7 +254,7 @@ local config = {
         edge = "│",
         item = "│",
         bottom = "─",
-        none = "  ",
+        none = " ",
       },
     },
 
