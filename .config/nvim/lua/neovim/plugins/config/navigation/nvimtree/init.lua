@@ -287,6 +287,11 @@ local config = {
         -- show an icon before the folder name.
         folder = true,
 
+        -- show a small arrow before the folder icon, requires the option
+        -- `renderer.icons.show.folder` value to be `true` and the option
+        -- `renderer.indent_markers.enable` value to be `false`.
+        folder_arrow = true,
+
         -- show a git status icon, see |renderer.icons.git_placement| requires
         -- |git.enable| `= true`
         git = true,
