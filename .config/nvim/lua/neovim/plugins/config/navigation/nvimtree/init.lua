@@ -270,6 +270,10 @@ local config = {
       -- over the git signs.
       git_placement = "before",
 
+      -- inserted between icon and filename, use with caution, it could break
+      -- rendering if you set an empty string depending on your font.
+      padding = " ",
+
       -- configuration options for showing icon types.
       show = {
 
