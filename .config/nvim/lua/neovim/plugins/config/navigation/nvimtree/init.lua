@@ -274,6 +274,9 @@ local config = {
       -- rendering if you set an empty string depending on your font.
       padding = " ",
 
+      -- used as a separator between `symbolic link's` source and target.
+      symlink_arrow = " ➛ ",
+
       -- configuration options for showing icon types.
       show = {
 
