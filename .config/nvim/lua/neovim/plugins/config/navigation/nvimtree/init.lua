@@ -306,6 +306,9 @@ local config = {
         -- glyph for symlinks to files.
         symlink = "",
 
+        -- glyph for bookmarks files.
+        bookmark = "",
+
         -- glyphs for git status.
         git = {
           unstaged = "~",
