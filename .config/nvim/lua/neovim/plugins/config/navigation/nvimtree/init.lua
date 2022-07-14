@@ -310,7 +310,11 @@ local config = {
         bookmark = "",
 
         -- glyphs for directories.
-        folder = {},
+        folder = {
+
+          -- hold arrow sign for closed directory.
+          arrow_closed = "",
+        },
 
         -- glyphs for git status.
         git = {
