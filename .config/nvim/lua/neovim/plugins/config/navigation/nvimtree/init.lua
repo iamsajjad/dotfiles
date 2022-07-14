@@ -309,6 +309,9 @@ local config = {
         -- glyph for bookmarks files.
         bookmark = "",
 
+        -- glyphs for directories.
+        folder = {},
+
         -- glyphs for git status.
         git = {
           unstaged = "~",
