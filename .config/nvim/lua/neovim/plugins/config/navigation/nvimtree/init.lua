@@ -320,6 +320,9 @@ local config = {
 
           -- hold sign for close not empty directory.
           default = "",
+
+          -- hold sign for open not empty directory.
+          open = "",
         },
 
         -- glyphs for git status.
