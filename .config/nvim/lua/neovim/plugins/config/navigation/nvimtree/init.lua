@@ -317,6 +317,9 @@ local config = {
 
           -- hold arrow sign for open directory.
           arrow_open = "",
+
+          -- hold sign for close not empty directory.
+          default = "",
         },
 
         -- glyphs for git status.
