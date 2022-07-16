@@ -326,6 +326,9 @@ local config = {
 
           -- hold sign for close empty directory.
           empty = "",
+
+          -- hold sign for open empty directory.
+          empty_open = "",
         },
 
         -- glyphs for git status.
