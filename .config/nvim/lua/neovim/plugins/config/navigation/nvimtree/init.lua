@@ -329,6 +329,9 @@ local config = {
 
           -- hold sign for open empty directory.
           empty_open = "",
+
+          -- hold sign for close symbolic link directory.
+          symlink = "",
         },
 
         -- glyphs for git status.
