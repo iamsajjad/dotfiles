@@ -345,6 +345,7 @@ local config = {
           renamed = "≈",
           untracked = "?",
           deleted = "-",
+          ignored = "◌",
         },
       },
     },
