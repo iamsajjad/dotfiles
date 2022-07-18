@@ -104,9 +104,10 @@ local config = {
     -- enables the feature
     enable = true,
 
-    -- update the root directory of the tree to the one of the folder containing the file
-    -- if the file is not under the current root directory only relevant when `update_focused_file.enable` is true
-    update_cwd = false,
+    -- update the root directory of the tree if the file is not under current root
+    -- directory, it prefers vim's `cwd` and `root_dirs`, otherwise it falls back to the
+    -- folder containing the file, only relevant when `update_focused_file.enable` is `true`.
+    update_root = false,
 
     -- list of buffer names / filetypes that will not update the cwd if the file isn't found under the current root directory
     -- only relevant when `update_focused_file.update_cwd` is true and `update_focused_file.enable` is true
