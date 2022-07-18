@@ -352,6 +352,9 @@ local config = {
 
     -- a list of filenames that gets highlighted with `NvimTreeSpecialFile`.
     special_files = { "Cargo.toml", "Makefile", "README.md", "readme.md" },
+
+    -- whether to show the destination of the symlink.
+    symlink_destination = true,
   },
 
   filters = {
