@@ -61,8 +61,8 @@ local config = {
   -- only relevant when `update_focused_file.update_root` is `true`.
   prefer_startup_root = false,
 
-  -- hijacks new directory buffers when they are opened.
-  update_to_buf_dir = {
+  -- hijacks new directory buffers when they are opened (`:e directory-name-here`).
+  hijack_directories = {
 
     -- enable the feature
     enable = true,
