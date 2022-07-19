@@ -100,6 +100,9 @@ local config = {
     -- if the node with diagnostic is not visible, then show diagnostic in the
     -- parent directory.
     show_on_dirs = false,
+
+    -- idle milliseconds between diagnostic event and update.
+    debounce_delay = 50,
   },
 
   -- update the focused file on `BufEnter`, un-collapses the folders recursively until it finds the file
