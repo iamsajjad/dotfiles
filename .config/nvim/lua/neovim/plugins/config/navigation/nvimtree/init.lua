@@ -96,6 +96,10 @@ local config = {
   -- show lsp diagnostics in the signcolumn
   diagnostics = {
     enable = true,
+
+    -- if the node with diagnostic is not visible, then show diagnostic in the
+    -- parent directory.
+    show_on_dirs = false,
   },
 
   -- update the focused file on `BufEnter`, un-collapses the folders recursively until it finds the file
