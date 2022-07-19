@@ -117,8 +117,9 @@ local config = {
   -- configuration options for the system open command (`s` in the tree by default)
   system_open = {
 
-    -- the command to run this, leaving nil should work in most cases
-    cmd = nil,
+    -- take the command to run, leaving empty should work but useful if you want to
+    -- override the default command with another one.
+    cmd = "",
 
     -- the command arguments as a list
     args = {},
