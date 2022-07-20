@@ -105,7 +105,9 @@ local config = {
     debounce_delay = 50,
 
     -- hold icons for diagnostic severity.
-    icons = {},
+    icons = {
+      hint = "",
+    },
   },
 
   -- update the focused file on `BufEnter`, un-collapses the folders recursively until it finds the file
