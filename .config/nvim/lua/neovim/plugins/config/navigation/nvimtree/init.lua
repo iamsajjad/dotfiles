@@ -107,6 +107,7 @@ local config = {
     -- hold icons for diagnostic severity.
     icons = {
       hint = "",
+      info = "",
     },
   },
 
