@@ -108,6 +108,7 @@ local config = {
     icons = {
       hint = "",
       info = "",
+      warning = "",
     },
   },
 
