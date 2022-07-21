@@ -109,6 +109,7 @@ local config = {
       hint = "",
       info = "",
       warning = "",
+      error = "",
     },
   },
 
