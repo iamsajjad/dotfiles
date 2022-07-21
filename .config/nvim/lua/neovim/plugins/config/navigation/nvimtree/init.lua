@@ -381,6 +381,10 @@ local config = {
 
     -- ignore files and directories
     custom = { ".git", "node_modules" },
+
+    -- list of directories or files to exclude from filtering: always show them. overrides
+    -- `git.ignore`, `filters.dotfiles` and `filters.custom`.
+    exclude = {},
   },
 }
 
