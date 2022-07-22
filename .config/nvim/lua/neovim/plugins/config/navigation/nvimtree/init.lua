@@ -393,6 +393,9 @@ local config = {
 
     -- enable and disable the feature.
     enable = true,
+
+    -- idle milliseconds between filesystem change and action.
+    debounce_delay = 50,
   },
 }
 
