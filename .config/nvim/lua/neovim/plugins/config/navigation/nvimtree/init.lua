@@ -386,6 +386,10 @@ local config = {
     -- `git.ignore`, `filters.dotfiles` and `filters.custom`.
     exclude = {},
   },
+
+  -- with this feature, the tree will be updated only for the appropriate folder change,
+  -- resulting in better performance.
+  filesystem_watchers = {},
 }
 
 -- load nvimtree configurations
