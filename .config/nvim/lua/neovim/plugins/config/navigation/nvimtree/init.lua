@@ -389,7 +389,11 @@ local config = {
 
   -- with this feature, the tree will be updated only for the appropriate folder change,
   -- resulting in better performance.
-  filesystem_watchers = {},
+  filesystem_watchers = {
+
+    -- enable and disable the feature.
+    enable = true,
+  },
 }
 
 -- load nvimtree configurations
