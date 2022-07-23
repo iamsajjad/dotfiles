@@ -148,6 +148,9 @@ local config = {
     -- hide ignored files and directories
     ignore = true,
 
+    -- show status icons of children when directory itself has no status icon.
+    show_on_dirs = true,
+
     -- timeout
     timeout = 500,
   },
