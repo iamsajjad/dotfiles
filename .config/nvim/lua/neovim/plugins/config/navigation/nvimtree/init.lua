@@ -232,6 +232,9 @@ local config = {
     -- (system), otherwise, it will be stored in '1' and '"'.
     use_system_clipboard = true,
 
+    -- current directory behaviour
+    change_dir = {},
+
     -- configuration when file is opened
     open_file = {
 
