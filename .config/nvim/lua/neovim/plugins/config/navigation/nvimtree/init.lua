@@ -227,6 +227,11 @@ local config = {
 
   actions = {
 
+    -- a boolean value that toggle the use of system clipboard when `copy` or `paste`
+    -- function are invoked. When enabled, copied text will be stored in registers '+'
+    -- (system), otherwise, it will be stored in '1' and '"'.
+    use_system_clipboard = true,
+
     -- configuration when file is opened
     open_file = {
 
