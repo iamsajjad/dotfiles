@@ -233,7 +233,11 @@ local config = {
     use_system_clipboard = true,
 
     -- current directory behaviour
-    change_dir = {},
+    change_dir = {
+
+      -- change the working directory when changing directories in the tree.
+      enable = true,
+    },
 
     -- configuration when file is opened
     open_file = {
