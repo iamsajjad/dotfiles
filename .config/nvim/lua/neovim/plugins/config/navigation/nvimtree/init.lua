@@ -241,6 +241,9 @@ local config = {
       -- use `:cd` instead of `:lcd` when changing directories. consider that this might
       -- cause issues with the `nvim-tree.sync_root_with_cwd` option.
       global = false,
+
+      -- restrict changing to a directory above the global current working directory.
+      restrict_above_cwd = false,
     },
 
     -- configuration when file is opened
