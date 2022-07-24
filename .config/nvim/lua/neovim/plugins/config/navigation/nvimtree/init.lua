@@ -237,6 +237,10 @@ local config = {
 
       -- change the working directory when changing directories in the tree.
       enable = true,
+
+      -- use `:cd` instead of `:lcd` when changing directories. consider that this might
+      -- cause issues with the `nvim-tree.sync_root_with_cwd` option.
+      global = false,
     },
 
     -- configuration when file is opened
