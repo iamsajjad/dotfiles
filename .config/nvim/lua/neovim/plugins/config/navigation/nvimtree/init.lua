@@ -252,6 +252,9 @@ local config = {
       -- limit the number of folders being explored when expanding every directories.
       -- avoids hanging neovim when running this action on very large directories.
       max_folder_discovery = 300,
+
+      -- a list of directories that should not be expanded automatically.
+      exclude = {},
     },
 
     -- configuration when file is opened
