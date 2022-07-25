@@ -246,6 +246,9 @@ local config = {
       restrict_above_cwd = false,
     },
 
+    -- configuration for expand all behaviour.
+    expand_all = {},
+
     -- configuration when file is opened
     open_file = {
 
