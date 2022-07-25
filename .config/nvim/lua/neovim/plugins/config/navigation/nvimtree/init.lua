@@ -247,7 +247,12 @@ local config = {
     },
 
     -- configuration for expand all behaviour.
-    expand_all = {},
+    expand_all = {
+
+      -- limit the number of folders being explored when expanding every directories.
+      -- avoids hanging neovim when running this action on very large directories.
+      max_folder_discovery = 300,
+    },
 
     -- configuration when file is opened
     open_file = {
