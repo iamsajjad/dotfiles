@@ -258,7 +258,12 @@ local config = {
     },
 
     -- configuration for file popup behaviour.
-    file_popup = {},
+    file_popup = {
+
+      -- floating window configuration for `file_popup`. see `:help nvim_open_win`
+      -- for more details.
+      open_win_config = {},
+    },
 
     -- configuration when file is opened
     open_file = {
