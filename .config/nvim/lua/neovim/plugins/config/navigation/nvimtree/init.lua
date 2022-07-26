@@ -257,6 +257,9 @@ local config = {
       exclude = {},
     },
 
+    -- configuration for file popup behaviour.
+    file_popup = {},
+
     -- configuration when file is opened
     open_file = {
 
