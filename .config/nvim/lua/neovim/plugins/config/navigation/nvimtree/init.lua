@@ -265,6 +265,7 @@ local config = {
       open_win_config = {
         col = 1,
         row = 1,
+        relative = "cursor",
       },
     },
 
