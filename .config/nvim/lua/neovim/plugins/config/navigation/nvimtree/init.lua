@@ -266,6 +266,7 @@ local config = {
         col = 1,
         row = 1,
         relative = "cursor",
+        border = "shadow",
       },
     },
 
