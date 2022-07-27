@@ -264,6 +264,7 @@ local config = {
       -- for more details.
       open_win_config = {
         col = 1,
+        row = 1,
       },
     },
 
